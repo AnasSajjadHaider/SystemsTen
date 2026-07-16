@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<title>SYSTEM TEN — Digital Agency That Builds Systems</title>
+<meta name="description" content="System Ten delivers AI automation, web development, UI/UX design, and growth marketing. We build systems that scale.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/axis-industrial.css">
+<link rel="stylesheet" href="css/axis-main-page.css">
+
+</head>
+<body>
+
+<!-- ====== HEADER ====== -->
+<header class="header">
+    <div class="header__inner">
+        <div class="header__left">
+            <a href="index.html" class="header__logo" aria-label="System Ten Home">
+                <img src="img/logo.png" alt="systems | ten" class="header__logo-img">
+            </a>
+            <span class="header__sep"></span>
+            <span class="header__product">Digital Agency</span>
+        </div>
+        <nav class="header__nav" id="headerNav">
+            <a href="index.html" class="active">Home</a>
+            <a href="landing-page.html">Services</a>
+            <a href="the-observer.html">About</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="header__right">
+            <div class="header__status"><span class="header__status-dot"></span><span>Online</span></div>
+        </div>
+        <button class="header__burger" id="headerBurger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+    <div class="hero__grid hero__grid--dense" aria-hidden="true"></div>
+    <div class="hero__label reveal">Est. 2024 — Digital Agency</div>
+    <h1 class="hero__title">
+        <span class="line">Systems</span>
+        <span class="line line--indent">That Scale<span class="accent-dot">.</span></span>
+    </h1>
+    <div class="hero__bottom">
+        <p class="hero__desc reveal">We engineer digital solutions that automate workflows, accelerate growth, and transform businesses from the inside out.</p>
+        <div class="hero__stats reveal">
+            <div><div class="hero__stat-num">50<span class="accent">+</span></div><div class="hero__stat-label">Projects Delivered</div></div>
+            <div><div class="hero__stat-num">98<span class="accent">%</span></div><div class="hero__stat-label">Client Satisfaction</div></div>
+            <div><div class="hero__stat-num">14</div><div class="hero__stat-label">Services Offered</div></div>
+        </div>
+    </div>
+    <div class="hero__scroll-cue" aria-hidden="true">Scroll</div>
+</section>
+
+
+<!-- ====== BENTO SERVICES ====== -->
+<section class="section" id="services">
+    <div class="container">
+        <div class="section__header reveal">
+            <div class="section__eyebrow">// What We Do</div>
+            <h2 class="section__title">Our<br>Services</h2>
+        </div>
+        <div class="bento__grid">
+            <a href="#contact" class="bento-card bento-card--wide reveal">
+                <div class="bento-card__number">ST—01</div>
+                <div><h3 class="bento-card__title">Digital<br>Transformation</h3><p class="bento-card__text">AI-powered automation, ERP implementation, API integrations, and technical consulting. We modernize your operations from the ground up.</p></div>
+                <div class="bar-chart"><div class="bar-chart__col" style="height:45%"></div><div class="bar-chart__col" style="height:70%"></div><div class="bar-chart__col" style="height:55%"></div><div class="bar-chart__col" style="height:90%"></div><div class="bar-chart__col" style="height:65%"></div><div class="bar-chart__col" style="height:100%"></div><div class="bar-chart__col" style="height:80%"></div><div class="bar-chart__col" style="height:95%"></div></div>
+                <div style="align-self:end;display:flex;flex-wrap:wrap;gap:0.5rem"><span class="tag">AI Automation</span><span class="tag tag--filled">ERP Systems</span><span class="tag">API Sync</span><span class="tag">Consulting</span></div>
+            </a>
+            <a href="#contact" class="bento-card bento-card--narrow bento-card--dark reveal">
+                <div class="bento-card__number">ST—02</div>
+                <h3 class="bento-card__title">Web &<br>Design</h3>
+                <p class="bento-card__text" style="opacity:0.55">Web development, redesign, UI/UX, and graphic design — all under one roof.</p>
+                <div class="bento-card__stat">4<span style="font-size:0.4em;opacity:0.5">in1</span></div>
+            </a>
+            <a href="#contact" class="bento-card bento-card--mid reveal">
+                <div class="bento-card__number">ST—03</div>
+                <div><h3 class="bento-card__title">Marketing<br>& Growth</h3><p class="bento-card__text">Search optimization, paid advertising, and digital strategy that drives measurable results and sustainable growth.</p></div>
+                <div style="align-self:end;display:flex;flex-wrap:wrap;gap:0.5rem"><span class="tag">SEO</span><span class="tag tag--filled">Google Ads</span><span class="tag">Meta Ads</span></div>
+            </a>
+            <a href="#contact" class="bento-card bento-card--mid bento-card--safety reveal">
+                <div class="bento-card__number" style="opacity:0.6">ST—04</div>
+                <h3 class="bento-card__title">Customer<br>Automation</h3>
+                <p class="bento-card__text" style="opacity:0.85">AI chatbots, WhatsApp integration, and mobile apps that automate customer communication 24/7.</p>
+                <div class="bento-card__stat">24/7</div>
+            </a>
+            <a href="#contact" class="bento-card bento-card--narrow bento-card--tall reveal">
+                <div class="bento-card__number">ST—05</div>
+                <h3 class="bento-card__title">E-Commerce<br>Solutions</h3>
+                <p class="bento-card__text">Full online store setup, payment integration, and inventory management systems.</p>
+                <div style="align-self:end"><div class="bento-card__stat">100<span class="accent" style="font-size:0.4em">%</span></div><div class="bento-card__text" style="margin-top:0.5rem">Custom Built</div></div>
+            </a>
+            <a href="#contact" class="bento-card bento-card--wide bento-card--dark reveal">
+                <div class="bento-card__number">ST—06</div>
+                <div><h3 class="bento-card__title">Mobile App<br>Development</h3><p class="bento-card__text" style="opacity:0.55">Native iOS and Android applications built for performance, security, and seamless user experience.</p></div>
+                <div class="bar-chart"><div class="bar-chart__col" style="height:60%"></div><div class="bar-chart__col" style="height:80%"></div><div class="bar-chart__col" style="height:100%"></div><div class="bar-chart__col" style="height:70%"></div><div class="bar-chart__col" style="height:90%"></div><div class="bar-chart__col" style="height:50%"></div></div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ====== TICKER ====== -->
+<div class="ticker" aria-hidden="true"><div class="ticker__track"><span class="ticker__item">AI Automation</span><span class="ticker__item">Web Development</span><span class="ticker__item">UI/UX Design</span><span class="ticker__item">SEO & Marketing</span><span class="ticker__item">Chatbot Solutions</span><span class="ticker__item">ERP Systems</span><span class="ticker__item">Graphic Design</span><span class="ticker__item">E-Commerce</span><span class="ticker__item">AI Automation</span><span class="ticker__item">Web Development</span><span class="ticker__item">UI/UX Design</span><span class="ticker__item">SEO & Marketing</span><span class="ticker__item">Chatbot Solutions</span><span class="ticker__item">ERP Systems</span><span class="ticker__item">Graphic Design</span><span class="ticker__item">E-Commerce</span></div></div>
+<div class="ticker ticker--reverse ticker--safety" aria-hidden="true"><div class="ticker__track"><span class="ticker__item">Built to Scale</span><span class="ticker__item">Zero Compromise</span><span class="ticker__item">System Ten</span><span class="ticker__item">Digital Excellence</span><span class="ticker__item">On Time — On Budget</span><span class="ticker__item">System Ten</span><span class="ticker__item">Built to Scale</span><span class="ticker__item">Zero Compromise</span><span class="ticker__item">System Ten</span><span class="ticker__item">Digital Excellence</span><span class="ticker__item">On Time — On Budget</span><span class="ticker__item">System Ten</span></div></div>
+
+
+<!-- ====== THE PROCESS ====== -->
+<section class="section" id="process">
+    <div class="container">
+        <div class="stack__header reveal">
+            <div><div class="section__eyebrow">// How We Deliver</div><h2 class="section__title">The Process</h2></div>
+            <p class="stack__subtitle">Four phases. One outcome. Systems that outlast the tech cycle that built them.</p>
+        </div>
+        <div>
+            <article class="stack__card reveal"><div class="stack__card-left"><div class="stack__card-step">01</div></div><div class="stack__card-right"><h3 class="stack__card-title">Discovery &<br>Strategy</h3><p class="stack__card-text">We research your business, analyze competitors, and map out a tailored strategy. Every constraint becomes a parameter.</p><div class="stack__card-tags"><span class="tag">Research</span><span class="tag">Audit</span><span class="tag tag--filled">Strategy</span></div></div></article>
+            <article class="stack__card reveal"><div class="stack__card-left"><div class="stack__card-step">02</div></div><div class="stack__card-right"><h3 class="stack__card-title">Design &<br>Prototype</h3><p class="stack__card-text">Full UI/UX design with interactive prototypes. We iterate until the experience feels effortless.</p><div class="stack__card-tags"><span class="tag">Wireframes</span><span class="tag tag--safety">UI Design</span><span class="tag">Prototype</span></div></div></article>
+            <article class="stack__card reveal"><div class="stack__card-left"><div class="stack__card-step">03</div></div><div class="stack__card-right"><h3 class="stack__card-title">Development<br>& Testing</h3><p class="stack__card-text">Clean code, automated testing, rigorous QA. Every feature is built to spec and stress-tested before deployment.</p><div class="stack__card-tags"><span class="tag tag--filled">Full-Stack</span><span class="tag">QA Testing</span><span class="tag">CI/CD</span></div></div></article>
+            <article class="stack__card reveal"><div class="stack__card-left"><div class="stack__card-step">04</div></div><div class="stack__card-right"><h3 class="stack__card-title">Launch &<br>Optimize</h3><p class="stack__card-text">We deploy, monitor, and continuously optimize. Post-launch support with performance analytics and iterative improvements.</p><div class="stack__card-tags"><span class="tag">Deployment</span><span class="tag">Analytics</span><span class="tag tag--safety">Growth</span></div></div></article>
+        </div>
+    </div>
+</section>
+
+
+<!-- ====== TEAM ====== -->
+<section class="section section--surface" id="team">
+    <div class="container">
+        <div class="section__header reveal">
+            <div class="section__eyebrow">// Our Expert Team</div>
+            <h2 class="section__title">The People<br>Behind It</h2>
+        </div>
+        <div class="team__grid">
+            <div class="team-card team-card--featured reveal">
+                <div class="team-card__img-wrap"><img src="img/anas.png" alt="Muhammad Anas Sajjad Haider" class="team-card__img" loading="lazy"></div>
+                <div class="team-card__info">
+                    <div class="team-card__number">01</div>
+                    <h3 class="team-card__name">Muhammad Anas<br>Sajjad Haider</h3>
+                    <div class="team-card__role">CEO & Founder</div>
+                </div>
+            </div>
+            <div class="team-card reveal">
+                <div class="team-card__img-wrap"><img src="img/moiz.jpg" alt="Abdul Moiz Ghani" class="team-card__img" loading="lazy"></div>
+                <div class="team-card__info">
+                    <div class="team-card__number">02</div>
+                    <h3 class="team-card__name">Abdul Moiz<br>Ghani</h3>
+                    <div class="team-card__role">UI/UX Designer</div>
+                </div>
+            </div>
+            <div class="team-card reveal">
+                <div class="team-card__img-wrap"><img src="img/mustafa.png" alt="Muhammad Mustafa Mubashir" class="team-card__img" loading="lazy"></div>
+                <div class="team-card__info">
+                    <div class="team-card__number">03</div>
+                    <h3 class="team-card__name">Muhammad Mustafa<br>Mubashir</h3>
+                    <div class="team-card__role">Web & App Developer</div>
+                </div>
+            </div>
+            <div class="team-card team-card--dark reveal">
+                <div class="team-card__img-wrap"><img src="img/abdullah.png" alt="Abdullah Waseem" class="team-card__img" loading="lazy"></div>
+                <div class="team-card__info">
+                    <div class="team-card__number">04</div>
+                    <h3 class="team-card__name">Abdullah<br>Waseem</h3>
+                    <div class="team-card__role">Python Developer</div>
+                </div>
+            </div>
+            <div class="team-card reveal">
+                <div class="team-card__img-wrap"><img src="img/saif.jpg" alt="Saifullah Akram" class="team-card__img" loading="lazy"></div>
+                <div class="team-card__info">
+                    <div class="team-card__number">05</div>
+                    <h3 class="team-card__name">Saifullah<br>Akram</h3>
+                    <div class="team-card__role">SEO Expert</div>
+                </div>
+            </div>
+            <div class="team-card reveal">
+                <div class="team-card__img-wrap"><img src="img/ahad.jpg" alt="Abdul Ahad" class="team-card__img" loading="lazy"></div>
+                <div class="team-card__info">
+                    <div class="team-card__number">06</div>
+                    <h3 class="team-card__name">Abdul<br>Ahad</h3>
+                    <div class="team-card__role">Data Analyst</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ====== TESTIMONIALS ====== -->
+<section class="section" id="testimonials">
+    <div class="container">
+        <div class="section__header reveal">
+            <div class="section__eyebrow">// Client Feedback</div>
+            <h2 class="section__title">What They<br>Say</h2>
+        </div>
+        <div class="testimonial__grid">
+            <article class="testimonial-card reveal">
+                <div class="testimonial-card__stars">★★★★★</div>
+                <blockquote class="testimonial-card__quote">"System Ten completely transformed our online presence. Their team delivered a website that not only looks incredible but actually converts. Revenue up 40% in three months."</blockquote>
+                <div class="testimonial-card__author">Ahmed R.</div>
+                <div class="testimonial-card__company">CEO, TechVentures Ltd.</div>
+            </article>
+            <article class="testimonial-card testimonial-card--dark reveal">
+                <div class="testimonial-card__stars">★★★★★</div>
+                <blockquote class="testimonial-card__quote">"The AI chatbot they built handles 80% of our customer queries automatically. Our support team now focuses on what actually matters. Game changer."</blockquote>
+                <div class="testimonial-card__author">Sara K.</div>
+                <div class="testimonial-card__company">Operations Lead, CloudServe</div>
+            </article>
+            <article class="testimonial-card reveal">
+                <div class="testimonial-card__stars">★★★★★</div>
+                <blockquote class="testimonial-card__quote">"From SEO strategy to complete brand redesign — they handled everything. Professional, fast, and the results speak for themselves. Organic traffic tripled."</blockquote>
+                <div class="testimonial-card__author">Faisal M.</div>
+                <div class="testimonial-card__company">Founder, GrowthPak</div>
+            </article>
+            <article class="testimonial-card testimonial-card--safety reveal">
+                <div class="testimonial-card__stars">★★★★★</div>
+                <blockquote class="testimonial-card__quote">"Their ERP implementation streamlined our entire supply chain. What used to take days now happens in hours. The ROI was visible within the first month."</blockquote>
+                <div class="testimonial-card__author">Hassan T.</div>
+                <div class="testimonial-card__company">Director, MetalCraft Industries</div>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+<!-- ====== CONTACT ====== -->
+<section class="section" id="contact">
+    <div class="container">
+        <div class="grid-12">
+            <div class="reveal contact__info">
+                <div class="section__eyebrow">// Connect with us</div>
+                <h2 class="section__title">Get In<br>Touch</h2>
+                <p style="margin-top: 1.5rem; opacity: 0.7; font-size: var(--fs-data); line-height: 1.8;">
+                    Have a project in mind or want to automate your systems? Drop us a message and we'll get back to you within 24 hours.
+                </p>
+                <div style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div>
+                        <span style="color: var(--safety); font-weight: bold; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.1em; display: block; margin-bottom: 0.25rem;">Email:</span>
+                        <a href="mailto:muhammadanassajjad1@gmail.com" style="font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; font-weight: 500; text-decoration: underline;">muhammadanassajjad1@gmail.com</a>
+                    </div>
+                    <div>
+                        <span style="color: var(--safety); font-weight: bold; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.1em; display: block; margin-bottom: 0.25rem;">Phone:</span>
+                        <a href="tel:+923282790838" style="font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; font-weight: 500;">+92 328 2790838</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reveal contact__form-container">
+                <form action="https://formsubmit.co/muhammadanassajjad1@gmail.com" method="POST" class="contact-form">
+                    <!-- Formsubmit config -->
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - Systems Ten">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <div class="contact-form__row">
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <label for="name" style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Name</label>
+                            <input type="text" id="name" name="name" required style="padding: 0.8rem; border: var(--border-thin); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; background: var(--base); outline: none;">
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <label for="email" style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Email Address</label>
+                            <input type="email" id="email" name="email" required style="padding: 0.8rem; border: var(--border-thin); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; background: var(--base); outline: none;">
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="service" style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Service Needed</label>
+                        <select id="service" name="service" style="padding: 0.8rem; border: var(--border-thin); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; background: var(--base); outline: none;">
+                            <option value="AI Automation">AI Automation</option>
+                            <option value="Web Development">Web & App Development</option>
+                            <option value="UI/UX Design">UI/UX Design</option>
+                            <option value="Growth Marketing">Growth Marketing & SEO</option>
+                            <option value="ERP / CRM Systems">ERP / CRM (Odoo)</option>
+                            <option value="Other">Other / General Inquiry</option>
+                        </select>
+                    </div>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="message" style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Message</label>
+                        <textarea id="message" name="message" rows="4" required style="padding: 0.8rem; border: var(--border-thin); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; background: var(--base); outline: none; resize: vertical;"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary" style="align-self: flex-start;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ====== ABOUT ====== -->
+<section class="about">
+    <div class="about__inner">
+        <p class="about__text">
+            This website is designed for <strong>Systems Ten</strong>, a full-service digital agency specializing in
+            AI automation, web development, UI/UX design, and growth marketing.
+        </p>
+        <div class="about__links">
+            <a href="index.html" class="tag tag--safety">Home</a>
+            <a href="landing-page.html" class="tag tag--filled">Services</a>
+            <a href="the-observer.html" class="tag tag--filled">About Us</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <h2 class="font-display footer__brand-name">systems<br>ten<span class="accent">.</span></h2>
+                <p class="footer__brand-desc">Digital agency. AI automation. Web development. Growth marketing — from strategy through launch.</p>
+            </div>
+            <div class="footer__col"><div class="footer__col-title">Services</div><a href="landing-page.html">AI Automation</a><a href="landing-page.html">Web Development</a><a href="landing-page.html">UI/UX Design</a><a href="landing-page.html">SEO & Marketing</a><a href="landing-page.html">Chatbot Solutions</a></div>
+            <div class="footer__col"><div class="footer__col-title">Company</div><a href="the-observer.html">About Us</a><a href="#team">Our Team</a><a href="#process">Process</a><a href="#">Careers</a></div>
+            <div class="footer__col"><div class="footer__col-title">Get in Touch</div><a href="mailto:infosystemsten@gmail.com">infosystemsten@gmail.com</a><a href="#">Pakistan</a></div>
+        </div>
+        <div class="footer__bottom">
+            <span class="footer__copy">&copy; 2025 Systems Ten. All Rights Reserved.</span>
+            <button class="footer__back-top" id="backToTop" aria-label="Back to top">↑ Back to Top</button>
+        </div>
+    </div>
+</footer>
+
+<script src="js/axis-script.js"></script>
+</body>
+</html>
