@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<title>ERP & Accounting Solutions — Systems Ten</title>
+<meta name="description" content="Systems Ten designs and builds custom Shop ERP & Accounting Software solutions, tailored for inventory control, invoicing, ledgers, and cash flow.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/axis-industrial.css">
+<link rel="stylesheet" href="css/axis-erp.css">
+</head>
+<body>
+
+<!-- ====== HEADER ====== -->
+<header class="header">
+    <div class="header__inner">
+        <div class="header__left">
+            <a href="index.html" class="header__logo" aria-label="Systems Ten Home">
+                <img src="img/logo.png" alt="systems | ten" class="header__logo-img">
+            </a>
+            <span class="header__sep"></span>
+            <span class="header__product">ERP Solutions</span>
+        </div>
+        <nav class="header__nav" id="headerNav">
+            <a href="index.html">Home</a>
+            <a href="landing-page.html">Services</a>
+            <a href="erp-solutions.html" class="active">ERP Solutions</a>
+            <a href="the-observer.html">About</a>
+            <a href="index.html#team">Team</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="header__right">
+            <div class="header/status"><span class="header__status-dot"></span><span>Software Live</span></div>
+        </div>
+        <button class="header__burger" id="headerBurger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<!-- ====== HERO ====== -->
+<section class="hero hero--center hero--erp">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__label reveal">Systems Ten Products</div>
+    <h1 class="hero__title">SHOP ERP &<br>ACCOUNTING</h1>
+    <p class="hero__subtitle reveal">Sanitary & Retail Management Systems</p>
+    <p class="hero__desc reveal" style="margin-bottom:3rem">We engineer custom, lightweight accounting software that runs on any modern browser. Fully secure, lightning-fast, and built exactly for your retail operations.</p>
+    <div class="hero__actions reveal">
+        <a href="#demo" class="btn btn--primary">Request a Demo</a>
+        <a href="#showcase" class="btn btn--ghost">View Screenshot Tour</a>
+    </div>
+    <span class="hero__coords" aria-hidden="true">Bespoke Software / Worldwide</span>
+    <span class="hero__version" aria-hidden="true">v3.2 — Custom ERP Suite</span>
+</section>
+
+<!-- ====== SHOWCASE / GALLERY SECTION ====== -->
+<section class="section section--surface" id="showcase">
+    <div class="container">
+        <div class="section__header reveal">
+            <div class="section__eyebrow">// Live Screenshot Tour</div>
+            <h2 class="section__title">Sanitary Shop<br>System</h2>
+            <p style="margin-top: 1rem; opacity: 0.6; max-width: 600px;">Take a walk through our completed Sanitary Shop Management System. Use the thumbnails or arrows below to preview key modules in action.</p>
+        </div>
+
+        <!-- Brutalist Gallery Slider -->
+        <div class="gallery reveal">
+            <div class="gallery__viewport">
+                <button class="gallery__nav-btn gallery__nav-btn--prev" id="galleryPrev" aria-label="Previous Image">←</button>
+                
+                <div class="gallery__slide active" data-slide="0">
+                    <img src="img/erp-dashboard.png" alt="Sanitary Shop Management System Dashboard" class="gallery__img">
+                </div>
+                <div class="gallery__slide" data-slide="1">
+                    <img src="img/erp-banks.png" alt="Bank balance registry and cash tracking" class="gallery__img">
+                </div>
+                <div class="gallery__slide" data-slide="2">
+                    <img src="img/erp-invoices.png" alt="Invoices listing and management log" class="gallery__img">
+                </div>
+                <div class="gallery__slide" data-slide="3">
+                    <img src="img/erp-invoice-print.png" alt="Clean sales invoice print layout" class="gallery__img">
+                </div>
+                <div class="gallery__slide" data-slide="4">
+                    <img src="img/erp-receipts.png" alt="Receipts registry and payment tracking log" class="gallery__img">
+                </div>
+                
+                <button class="gallery__nav-btn gallery__nav-btn--next" id="galleryNext" aria-label="Next Image">→</button>
+            </div>
+            
+            <div class="gallery__caption-bar">
+                <span class="gallery__caption-text" id="galleryCaption">Dashboard - Real-time statistics for customers, suppliers, products, and bank accounts.</span>
+                <span class="gallery__counter" id="galleryCounter">1 / 5</span>
+            </div>
+            
+            <div class="gallery__thumbs">
+                <div class="gallery__thumb active" data-slide="0">
+                    <span class="gallery__thumb-num">01</span>
+                    Dashboard Overview
+                </div>
+                <div class="gallery__thumb" data-slide="1">
+                    <span class="gallery__thumb-num">02</span>
+                    Bank Registry
+                </div>
+                <div class="gallery__thumb" data-slide="2">
+                    <span class="gallery__thumb-num">03</span>
+                    Invoice Ledger
+                </div>
+                <div class="gallery__thumb" data-slide="3">
+                    <span class="gallery__thumb-num">04</span>
+                    Invoice Print
+                </div>
+                <div class="gallery__thumb" data-slide="4">
+                    <span class="gallery__thumb-num">05</span>
+                    Receipts & Cash
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== MODULE FEATURES ====== -->
+<section class="section" id="modules">
+    <div class="container">
+        <div class="section__header reveal">
+            <div class="section__eyebrow">// Fully Loaded Suite</div>
+            <h2 class="section__title">Software<br>Modules</h2>
+        </div>
+        
+        <div class="modules-grid reveal">
+            <!-- Card 1 -->
+            <div class="module-card">
+                <div>
+                    <div class="module-card__num">ST-M01</div>
+                    <h3 class="module-card__title">Billing & Invoices</h3>
+                    <p class="module-card__desc">Generate clean sales invoices instantly, process credit notes/returns, manage customer lists, and queue prints.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag">Invoice Print</span>
+                    <span class="tag tag--filled">Credit Notes</span>
+                    <span class="tag">Sales Ledger</span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="module-card">
+                <div>
+                    <div class="module-card__num">ST-M02</div>
+                    <h3 class="module-card__title">Inventory & Stocks</h3>
+                    <p class="module-card__desc">Keep track of product stock count in real-time. Log stock additions, modifications, adjustments, and warehouse limits.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag">Stock Ledger</span>
+                    <span class="tag tag--filled">Adjustments</span>
+                    <span class="tag">Alert Limits</span>
+                </div>
+            </div>
+
+            <!-- Card 3 (Dark) -->
+            <div class="module-card module-card--dark">
+                <div>
+                    <div class="module-card__num">ST-M03</div>
+                    <h3 class="module-card__title">Double Entry Ledger</h3>
+                    <p class="module-card__desc">Keep detailed transaction registers for customers and suppliers. Instantly audit histories and pending balances.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag">Cust. Ledgers</span>
+                    <span class="tag tag--filled">Supp. Ledgers</span>
+                    <span class="tag">Pending Bills</span>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="module-card">
+                <div>
+                    <div class="module-card__num">ST-M04</div>
+                    <h3 class="module-card__title">Cash Flow & Banks</h3>
+                    <p class="module-card__desc">Log multi-bank balances, record receipt cash logs, file payment entries, and track starting & ending register accounts.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag">Bank Balance</span>
+                    <span class="tag tag--filled">Receipts</span>
+                    <span class="tag">Payments</span>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="module-card">
+                <div>
+                    <div class="module-card__num">ST-M05</div>
+                    <h3 class="module-card__title">Role Authorities</h3>
+                    <p class="module-card__desc">Secure administrator controls. Create secondary cashiers or auditor roles with custom read/write permissions.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag">Admin Panel</span>
+                    <span class="tag tag--filled">Staff Roles</span>
+                    <span class="tag">Access Logs</span>
+                </div>
+            </div>
+
+            <!-- Card 6 (Safety) -->
+            <div class="module-card module-card--safety">
+                <div>
+                    <div class="module-card__num">ST-M06</div>
+                    <h3 class="module-card__title">Audits & Reports</h3>
+                    <p class="module-card__desc">Export sales summaries, tax audits, cashier logs, and monthly income statements in standard CSV/PDF formats.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag">PDF Statements</span>
+                    <span class="tag tag--filled">Monthly Stats</span>
+                    <span class="tag">Audit Trail</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== DEMO REQUEST FORM ====== -->
+<section class="section section--surface" id="demo">
+    <div class="container">
+        <div class="grid-12">
+            <div class="reveal contact__info">
+                <div class="section__eyebrow">// Showcase request</div>
+                <h2 class="section__title">Get a Custom<br>ERP Demo</h2>
+                <p style="margin-top: 1.5rem; opacity: 0.7; font-size: var(--fs-data); line-height: 1.8;">
+                    Let us know what kind of shop you operate (sanitary, ceramics, hardware, grocery, etc.). We will configure a custom demo instance for your staff to test.
+                </p>
+                <div style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div>
+                        <span style="color: var(--safety); font-weight: bold; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.1em; display: block; margin-bottom: 0.25rem;">Email Inquiry:</span>
+                        <a href="mailto:infosystemsten@gmail.com" style="font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; font-weight: 500; text-decoration: underline;">infosystemsten@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reveal contact__form-container">
+                <form action="https://formsubmit.co/infosystemsten@gmail.com" method="POST" class="contact-form">
+                    <input type="hidden" name="_subject" value="New Shop ERP Demo Request - Systems Ten">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <div class="contact-form__row">
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <label for="name" style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Full Name</label>
+                            <input type="text" id="name" name="name" required style="padding: 0.8rem; border: var(--border-thin); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; background: var(--base); outline: none;">
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <label for="shop" style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Shop / Business Name</label>
+                            <input type="text" id="shop" name="shop" required style="padding: 0.8rem; border: var(--border-thin); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; background: var(--base); outline: none;">
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form__row">
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <label for="email" style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Email Address</label>
+                            <input type="email" id="email" name="email" required style="padding: 0.8rem; border: var(--border-thin); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; background: var(--base); outline: none;">
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <label for="phone" style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required style="padding: 0.8rem; border: var(--border-thin); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; background: var(--base); outline: none;">
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="type" style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Business Vertical</label>
+                        <select id="type" name="business_vertical" style="padding: 0.8rem; border: var(--border-thin); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; background: var(--base); outline: none;">
+                            <option value="Sanitary Shop">Sanitary & Tile Shop</option>
+                            <option value="Hardware / Electrical">Hardware & Electrical Shop</option>
+                            <option value="Ceramics / Marbles">Ceramics & Marbles Shop</option>
+                            <option value="Wholesale Retail">Wholesale & General Retail</option>
+                            <option value="Multi-Shop Chain">Multi-Shop Chain Operations</option>
+                            <option value="Other">Other Retail Business</option>
+                        </select>
+                    </div>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="message" style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Requirements & Features Needed</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your inventory size, cashier counts, etc." required style="padding: 0.8rem; border: var(--border-thin); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; background: var(--base); outline: none; resize: vertical;"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary" style="align-self: flex-start;">Send Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <h2 class="font-display footer__brand-name">systems<br>ten<span class="accent">.</span></h2>
+                <p class="footer__brand-desc">Digital agency. AI automation. Web development. Growth marketing — from strategy through launch.</p>
+            </div>
+            <div class="footer__col"><div class="footer__col-title">Services</div><a href="landing-page.html">AI Automation</a><a href="landing-page.html">Web Development</a><a href="landing-page.html">UI/UX Design</a><a href="landing-page.html">SEO & Marketing</a><a href="landing-page.html">Chatbot Solutions</a></div>
+            <div class="footer__col"><div class="footer__col-title">Company</div><a href="the-observer.html">About Us</a><a href="index.html#team">Our Team</a><a href="index.html#process">Process</a><a href="#">Careers</a></div>
+            <div class="footer__col"><div class="footer__col-title">Get in Touch</div><a href="mailto:infosystemsten@gmail.com">infosystemsten@gmail.com</a><a href="#">Pakistan</a></div>
+        </div>
+        <div class="footer__bottom">
+            <span class="footer__copy">&copy; 2025 Systems Ten. All Rights Reserved.</span>
+            <button class="footer__back-top" id="backToTop" aria-label="Back to top">↑ Back to Top</button>
+        </div>
+    </div>
+</footer>
+
+<!-- Lightbox Overlay -->
+<div class="lightbox" id="lightbox">
+    <div class="lightbox__content">
+        <button class="lightbox__close" id="lightboxClose">✕ Close</button>
+        <img src="" alt="Fullscreen image" class="lightbox__img" id="lightboxImg">
+    </div>
+</div>
+
+<script src="js/axis-script.js"></script>
+<script>
+/* ====== ERP SOLUTIONS GALLERY SCRIPTS ====== */
+(function() {
+    var activeIdx = 0;
+    var slides = document.querySelectorAll('.gallery__slide');
+    var thumbs = document.querySelectorAll('.gallery__thumb');
+    var captionText = document.getElementById('galleryCaption');
+    var counterText = document.getElementById('galleryCounter');
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightboxImg');
+    var lightboxClose = document.getElementById('lightboxClose');
+    
+    var captions = [
+        "Dashboard - Real-time statistics for customers, suppliers, products, and bank accounts.",
+        "Banks & Cash - Opening balance, receipts, payments, and live cash on hand balances.",
+        "Invoicing Engine - Complete invoice listings with view, edit, print, return, and cancel capabilities.",
+        "Sales Invoice Design - Professional, clean print layout ready for billing and accounting audits.",
+        "Customer Receipts - Track customer payments, receipts, invoices, and bank transaction ledgers."
+    ];
+    
+    function showSlide(index) {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        
+        slides.forEach(function(slide) { slide.classList.remove('active'); });
+        thumbs.forEach(function(thumb) { thumb.classList.remove('active'); });
+        
+        slides[index].classList.add('active');
+        thumbs[index].classList.add('active');
+        
+        captionText.textContent = captions[index];
+        counterText.textContent = (index + 1) + ' / ' + slides.length;
+        activeIdx = index;
+    }
+    
+    // Prev / Next button actions
+    document.getElementById('galleryPrev').addEventListener('click', function(e) {
+        e.stopPropagation();
+        showSlide(activeIdx - 1);
+    });
+    
+    document.getElementById('galleryNext').addEventListener('click', function(e) {
+        e.stopPropagation();
+        showSlide(activeIdx + 1);
+    });
+    
+    // Thumbnail click actions
+    thumbs.forEach(function(thumb) {
+        thumb.addEventListener('click', function() {
+            var slideNum = parseInt(this.getAttribute('data-slide'));
+            showSlide(slideNum);
+        });
+    });
+    
+    // Image lightbox trigger
+    slides.forEach(function(slide) {
+        slide.addEventListener('click', function() {
+            var imgEl = this.querySelector('.gallery__img');
+            lightboxImg.src = imgEl.src;
+            lightboxImg.alt = imgEl.alt;
+            lightbox.classList.add('open');
+        });
+    });
+    
+    // Close lightbox
+    lightboxClose.addEventListener('click', function() {
+        lightbox.classList.remove('open');
+    });
+    
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('open');
+        }
+    });
+})();
+</script>
+</body>
+</html>
