@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/axis-industrial.css">
-<link rel="stylesheet" href="css/axis-erp.css">
+<link rel="stylesheet" href="css/plastic-dana.css">
 </head>
 <body>
 
@@ -22,131 +22,61 @@
                 <img src="img/logo.png" alt="systems | ten" class="header__logo-img">
             </a>
             <span class="header__sep"></span>
-            <span class="header__product">ERP Solutions</span>
+            <span class="header__product">Plastic Dana ERP</span>
         </div>
         <nav class="header__nav" id="headerNav">
             <a href="index.html">Home</a>
             <a href="landing-page.html">Services</a>
-            <a href="erp-solutions.html" class="active">Sanitary ERP</a>`r`n            <a href="plastic-dana-erp.html">Plastic Dana ERP</a>
+            <a href="erp-solutions.html">Sanitary ERP</a>
+            <a href="plastic-dana-erp.html" class="active">Plastic Dana ERP</a>
             <a href="the-observer.html">About</a>
             <a href="index.html#team">Team</a>
             <a href="index.html#contact">Contact</a>
         </nav>
         <div class="header__right">
-            <div class="header/status"><span class="header__status-dot"></span><span>Software Live</span></div>
+            <div class="header__status"><span class="header__status-dot"></span><span>Software Live</span></div>
         </div>
         <button class="header__burger" id="headerBurger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
 </header>
 
 <!-- ====== HERO ====== -->
-<section class="hero hero--center hero--erp">
+<section class="hero hero--center hero--erp" style="padding-bottom: 2rem;">
     <div class="hero__grid" aria-hidden="true"></div>
     <div class="hero__label reveal">Systems Ten Products</div>
-    <h1 class="hero__title">SHOP ERP &<br>ACCOUNTING</h1>
-    <p class="hero__subtitle reveal">Sanitary & Retail Management Systems</p>
-    <p class="hero__desc reveal" style="margin-bottom:3rem">We engineer custom, lightweight accounting software that runs on any modern browser. Fully secure, lightning-fast, and built exactly for your retail operations.</p>
-    <div class="hero__actions reveal">
-        <a href="#demo" class="btn btn--primary">Request a Demo</a>
-        <a href="#showcase" class="btn btn--ghost">View Screenshot Tour</a>
-    </div>
-    <span class="hero__coords" aria-hidden="true">Bespoke Software / Worldwide</span>
-    <span class="hero__version" aria-hidden="true">v3.2 — Custom ERP Suite</span>
+    <h1 class="hero__title">PLASTIC DANA<br>ERP SUITE</h1>
+    <p class="hero__subtitle reveal">Complete Manufacturing & Trading System</p>
+    <p class="hero__desc reveal" style="margin-bottom:2rem">Experience our new flagship ERP built specifically for the plastic dana industry. Fully responsive, secure, and lightning-fast.</p>
 </section>
 
-<!-- ====== SHOWCASE / GALLERY SECTION ====== -->
+<!-- ====== INTERACTIVE MOCKUP SECTION ====== -->
 <section class="section section--surface" id="showcase">
-    <div class="container">
-        <div class="section__header reveal">
-            <div class="section__eyebrow">// Live Screenshot Tour</div>
-            <h2 class="section__title">Sanitary Shop<br>System</h2>
-            <p style="margin-top: 1rem; opacity: 0.6; max-width: 600px;">Take a walk through our completed Sanitary Shop Management System. Use the thumbnails or arrows below to preview key modules in action.</p>
-        </div>
-
-        <!-- Brutalist Gallery Slider -->
-        <div class="gallery reveal">
-            <div class="gallery__viewport">
-                <button class="gallery__nav-btn gallery__nav-btn--prev" id="galleryPrev" aria-label="Previous Image">←</button>
-                
-                <div class="gallery__slide active" data-slide="0">
-                    <img src="img/erp-dashboard.png" alt="Sanitary Shop Management System Dashboard" class="gallery__img">
+    <div class="mockup-container reveal" id="mockupContainer">
+        <div class="mockup-window" id="mockupWindow">
+            <div class="mockup-header">
+                <div class="mockup-dots">
+                    <span class="mockup-dot red"></span>
+                    <span class="mockup-dot yellow"></span>
+                    <span class="mockup-dot green"></span>
                 </div>
-                <div class="gallery__slide" data-slide="1">
-                    <img src="img/erp-banks.png" alt="Bank balance registry and cash tracking" class="gallery__img">
-                </div>
-                <div class="gallery__slide" data-slide="2">
-                    <img src="img/erp-invoices.png" alt="Invoices listing and management log" class="gallery__img">
-                </div>
-                <div class="gallery__slide" data-slide="3">
-                    <img src="img/erp-invoice-print.png" alt="Clean sales invoice print layout" class="gallery__img">
-                </div>
-                <div class="gallery__slide" data-slide="4">
-                    <img src="img/erp-receipts.png" alt="Receipts registry and payment tracking log" class="gallery__img">
-                </div>
-                <div class="gallery__slide" data-slide="5">
-                    <img src="img/erp-add-customer.png" alt="Add customer database modal" class="gallery__img">
-                </div>
-                <div class="gallery__slide" data-slide="6">
-                    <img src="img/erp-products.png" alt="Product list catalog registry" class="gallery__img">
-                </div>
-                <div class="gallery__slide" data-slide="7">
-                    <img src="img/erp-stocks.png" alt="Stock levels adjustment register" class="gallery__img">
-                </div>
-                <div class="gallery__slide" data-slide="8">
-                    <img src="img/erp-ledger.png" alt="Customer accounting ledger" class="gallery__img">
-                </div>
-                <div class="gallery__slide" data-slide="9">
-                    <img src="img/erp-settings.png" alt="Admin settings and user permission manager" class="gallery__img">
-                </div>
-                
-                <button class="gallery__nav-btn gallery__nav-btn--next" id="galleryNext" aria-label="Next Image">→</button>
+                <div class="mockup-title">SystemsTen - Plastic Dana ERP</div>
             </div>
-            
-            <div class="gallery__caption-bar">
-                <span class="gallery__caption-text" id="galleryCaption">Dashboard - Real-time statistics for customers, suppliers, products, and bank accounts.</span>
-                <span class="gallery__counter" id="galleryCounter">1 / 10</span>
-            </div>
-            
-            <div class="gallery__thumbs">
-                <div class="gallery__thumb active" data-slide="0">
-                    <span class="gallery__thumb-num">01</span>
-                    Dashboard Overview
+            <div class="mockup-body">
+                <div class="mockup-sidebar">
+                    <button class="mockup-tab active" data-target="img/pd-chart-of-accounts.png">Chart of Accounts</button>
+                    <button class="mockup-tab" data-target="img/pd-purchase-inward.png">Purchase Inward</button>
+                    <button class="mockup-tab" data-target="img/pd-sales-invoicing.png">Sales Invoicing</button>
+                    <button class="mockup-tab" data-target="img/pd-cashier-vouchers.png">Cashier & Vouchers</button>
+                    <button class="mockup-tab" data-target="img/pd-party-ledger.png">Party Ledger</button>
+                    <button class="mockup-tab" data-target="img/pd-credit-debit-notes.png">Credit / Debit Notes</button>
+                    <button class="mockup-tab" data-target="img/pd-trial-balance.png">Trial Balance</button>
+                    <button class="mockup-tab" data-target="img/pd-items-stock.png">Items & Stock</button>
+                    <button class="mockup-tab" data-target="img/pd-arap-aging.png">AR/AP Aging</button>
+                    <button class="mockup-tab" data-target="img/pd-audit-log.png">Audit Log</button>
+                    <button class="mockup-tab" data-target="img/pd-drive-backup.png">Drive Backup</button>
                 </div>
-                <div class="gallery__thumb" data-slide="1">
-                    <span class="gallery__thumb-num">02</span>
-                    Bank Registry
-                </div>
-                <div class="gallery__thumb" data-slide="2">
-                    <span class="gallery__thumb-num">03</span>
-                    Invoice Ledger
-                </div>
-                <div class="gallery__thumb" data-slide="3">
-                    <span class="gallery__thumb-num">04</span>
-                    Invoice Print
-                </div>
-                <div class="gallery__thumb" data-slide="4">
-                    <span class="gallery__thumb-num">05</span>
-                    Receipts & Cash
-                </div>
-                <div class="gallery__thumb" data-slide="5">
-                    <span class="gallery__thumb-num">06</span>
-                    Add Customer
-                </div>
-                <div class="gallery__thumb" data-slide="6">
-                    <span class="gallery__thumb-num">07</span>
-                    Products Catalog
-                </div>
-                <div class="gallery__thumb" data-slide="7">
-                    <span class="gallery__thumb-num">08</span>
-                    Stock Control
-                </div>
-                <div class="gallery__thumb" data-slide="8">
-                    <span class="gallery__thumb-num">09</span>
-                    Customer Ledger
-                </div>
-                <div class="gallery__thumb" data-slide="9">
-                    <span class="gallery__thumb-num">10</span>
-                    Admin Settings
+                <div class="mockup-main">
+                    <img src="img/pd-chart-of-accounts.png" id="mockupImage" alt="Plastic Dana ERP Screenshot">
                 </div>
             </div>
         </div>
@@ -347,84 +277,51 @@
 
 <script src="js/axis-script.js"></script>
 <script>
-/* ====== ERP SOLUTIONS GALLERY SCRIPTS ====== */
+/* ====== 3D MOCKUP INTERACTIVE SCRIPTS ====== */
 (function() {
-    var activeIdx = 0;
-    var slides = document.querySelectorAll('.gallery__slide');
-    var thumbs = document.querySelectorAll('.gallery__thumb');
-    var captionText = document.getElementById('galleryCaption');
-    var counterText = document.getElementById('galleryCounter');
-    var lightbox = document.getElementById('lightbox');
-    var lightboxImg = document.getElementById('lightboxImg');
-    var lightboxClose = document.getElementById('lightboxClose');
+    const mockupContainer = document.getElementById('mockupContainer');
+    const mockupWindow = document.getElementById('mockupWindow');
+    const mockupTabs = document.querySelectorAll('.mockup-tab');
+    const mockupImage = document.getElementById('mockupImage');
     
-    var captions = [
-        "Dashboard - Real-time statistics for customers, suppliers, products, and bank accounts.",
-        "Banks & Cash - Opening balance, receipts, payments, and live cash on hand balances.",
-        "Invoicing Engine - Complete invoice listings with view, edit, print, return, and cancel capabilities.",
-        "Sales Invoice Design - Professional, clean print layout ready for billing and accounting audits.",
-        "Customer Receipts - Track customer payments, receipts, invoices, and bank transaction ledgers.",
-        "Add Customer - Form registry modal to add new customer accounts and opening balances.",
-        "Products Catalog - Live product directory displaying SKU, category, price, and stock levels.",
-        "Stock Control - Monitor live inventory levels and adjust product items catalog.",
-        "Customer Ledger - Interactive customer ledger tracking debits, credits, and closing balances.",
-        "Admin Settings - Global system settings, user cashier role management, and image upload configurations."
-    ];
-    
-    function showSlide(index) {
-        if (index < 0) index = slides.length - 1;
-        if (index >= slides.length) index = 0;
+    // Tab Switching Logic
+    mockupTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            // Remove active class from all
+            mockupTabs.forEach(t => t.classList.remove('active'));
+            // Add active class to clicked
+            this.classList.add('active');
+            
+            // Fade out image, change source, fade in
+            mockupImage.style.opacity = '0';
+            setTimeout(() => {
+                mockupImage.src = this.getAttribute('data-target');
+                mockupImage.style.opacity = '1';
+            }, 150);
+        });
+    });
+
+    // 3D Hover Effect
+    if(mockupContainer && mockupWindow) {
+        mockupContainer.addEventListener('mousemove', (e) => {
+            const rect = mockupContainer.getBoundingClientRect();
+            
+            // Calculate mouse position relative to container center
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            // Adjust the divisor to control the intensity of the tilt
+            const tiltX = -(y / rect.height) * 15; 
+            const tiltY = (x / rect.width) * 15;
+            
+            mockupWindow.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+        });
         
-        slides.forEach(function(slide) { slide.classList.remove('active'); });
-        thumbs.forEach(function(thumb) { thumb.classList.remove('active'); });
-        
-        slides[index].classList.add('active');
-        thumbs[index].classList.add('active');
-        
-        captionText.textContent = captions[index];
-        counterText.textContent = (index + 1) + ' / ' + slides.length;
-        activeIdx = index;
+        mockupContainer.addEventListener('mouseleave', () => {
+            // Reset to flat when mouse leaves
+            mockupWindow.style.transform = `rotateX(0deg) rotateY(0deg)`;
+        });
     }
-    
-    // Prev / Next button actions
-    document.getElementById('galleryPrev').addEventListener('click', function(e) {
-        e.stopPropagation();
-        showSlide(activeIdx - 1);
-    });
-    
-    document.getElementById('galleryNext').addEventListener('click', function(e) {
-        e.stopPropagation();
-        showSlide(activeIdx + 1);
-    });
-    
-    // Thumbnail click actions
-    thumbs.forEach(function(thumb) {
-        thumb.addEventListener('click', function() {
-            var slideNum = parseInt(this.getAttribute('data-slide'));
-            showSlide(slideNum);
-        });
-    });
-    
-    // Image lightbox trigger
-    slides.forEach(function(slide) {
-        slide.addEventListener('click', function() {
-            var imgEl = this.querySelector('.gallery__img');
-            lightboxImg.src = imgEl.src;
-            lightboxImg.alt = imgEl.alt;
-            lightbox.classList.add('open');
-        });
-    });
-    
-    // Close lightbox
-    lightboxClose.addEventListener('click', function() {
-        lightbox.classList.remove('open');
-    });
-    
-    lightbox.addEventListener('click', function(e) {
-        if (e.target === lightbox) {
-            lightbox.classList.remove('open');
-        }
-    });
 })();
 </script>
 </body>
