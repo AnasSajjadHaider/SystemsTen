@@ -172,79 +172,306 @@
 
                             <!-- Audit Log Tab -->
                             <div class="erp-tab-content" id="tab-audit-log">
-                                <div class="erp-page-title">
-                                    🛡 LIVE AUDIT TRAIL & FORENSICS
+                                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #dee2e6; padding-bottom:10px; margin-bottom:15px;">
+                                    <div style="display:flex; gap:10px;">
+                                        <button class="erp-btn erp-btn-primary" style="font-size:0.75rem; border-radius:5px;"><span style="margin-right:5px;">🕒</span> Live Audit Trail (5)</button>
+                                        <button class="erp-btn" style="font-size:0.75rem; color:#dc2626; border-color:#fca5a5; background:#fff5f5; border-radius:5px;"><span style="margin-right:5px;">🗑️</span> Forensic Trash Vault (1)</button>
+                                    </div>
+                                    <div>
+                                        <input type="text" class="erp-input" placeholder="🔍 Search user, action, module, or reason..." style="width:300px; font-size:0.75rem; font-weight:normal; text-transform:none;">
+                                    </div>
                                 </div>
                                 <table class="erp-table">
                                     <thead>
                                         <tr>
-                                            <th>Timestamp</th>
-                                            <th>Action</th>
-                                            <th>Module</th>
-                                            <th>User</th>
-                                            <th>Activity Details</th>
-                                            <th>Reason</th>
+                                            <th>TIMESTAMP</th>
+                                            <th>ACTION</th>
+                                            <th>MODULE</th>
+                                            <th>USER</th>
+                                            <th>ACTIVITY DETAILS</th>
+                                            <th style="color:#dc2626;">REASON (IF CANCELLED/DELETED)</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>9/3/2026, 11:36:46 PM</td>
-                                            <td><span style="color:#065f46; border:1px solid #a7f3d0; background:#ecfdf5; padding:2px 6px; border-radius:3px; font-size:0.7rem;">CREATE</span></td>
+                                            <td style="color:#666; font-size:0.7rem;">9/4/2026, 1:15:36 AM</td>
+                                            <td><span style="color:#059669; border:1px solid #059669; background:#ecfdf5; padding:1px 6px; border-radius:3px; font-size:0.65rem; font-weight:700;">CREATE</span></td>
+                                            <td style="color:#b45309; font-weight:600;">Sales</td>
+                                            <td style="font-weight:700;">System Administrator</td>
+                                            <td>Generated Sales Invoice #11697 for CUSTOMER 1 (Rs 600,000 | 100 Bags)</td>
+                                            <td style="color:#fca5a5;">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:#666; font-size:0.7rem;">9/4/2026, 1:14:55 AM</td>
+                                            <td><span style="color:#059669; border:1px solid #059669; background:#ecfdf5; padding:1px 6px; border-radius:3px; font-size:0.65rem; font-weight:700;">CREATE</span></td>
+                                            <td style="color:#b45309; font-weight:600;">Accounts</td>
+                                            <td style="font-weight:700;">System Administrator</td>
+                                            <td>Created Account: 10701 - CUSTOMER 1 (Customer)</td>
+                                            <td style="color:#fca5a5;">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:#666; font-size:0.7rem;">9/4/2026, 1:14:29 AM</td>
+                                            <td><span style="color:#059669; border:1px solid #059669; background:#ecfdf5; padding:1px 6px; border-radius:3px; font-size:0.65rem; font-weight:700;">CREATE</span></td>
+                                            <td style="color:#b45309; font-weight:600;">Products</td>
+                                            <td style="font-weight:700;">System Administrator</td>
+                                            <td>Created Product Grade: [PRD-0001] product 1 (pr01)</td>
+                                            <td style="color:#fca5a5;">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:#666; font-size:0.7rem;">9/4/2026, 1:03:27 AM</td>
+                                            <td><span style="color:#dc2626; border:1px solid #dc2626; background:#fef2f2; padding:1px 6px; border-radius:3px; font-size:0.65rem; font-weight:700;">CANCEL</span></td>
                                             <td style="color:#b45309; font-weight:600;">Account</td>
-                                            <td style="font-weight:600;">System Administrator</td>
+                                            <td style="font-weight:700;">System Administrator</td>
+                                            <td>Cancelled Account: 30001 - CAPITAL ACCOUNT (01 Capital). Preserved in Forensic Archive Vault.</td>
+                                            <td style="color:#f87171; font-style:italic;">seed acc del</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:#666; font-size:0.7rem;">9/3/2026, 11:36:46 PM</td>
+                                            <td><span style="color:#059669; border:1px solid #059669; background:#ecfdf5; padding:1px 6px; border-radius:3px; font-size:0.65rem; font-weight:700;">CREATE</span></td>
+                                            <td style="color:#b45309; font-weight:600;">Account</td>
+                                            <td style="font-weight:700;">System Administrator</td>
                                             <td>System Administrator logged in.</td>
-                                            <td style="color:#dc2626; font-style:italic;">User Login</td>
+                                            <td style="color:#fca5a5; font-style:italic;">User Login</td>
                                         </tr>
                                     </tbody>
                                 </table>
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px; font-size:0.7rem; color:#666;">
+                                    <div>Showing <strong>1</strong> to <strong>5</strong> of <strong>5</strong> entries &nbsp;|&nbsp; <span style="border-bottom:1px solid #ccc; cursor:pointer;">50 rows / page</span></div>
+                                    <div style="display:flex; gap:5px; align-items:center;">
+                                        <span style="color:#aaa; cursor:not-allowed;">&lt; Prev</span>
+                                        <span style="background:#1a73e8; color:#fff; padding:3px 8px; border-radius:3px; font-weight:700;">1</span>
+                                        <span style="color:#aaa; cursor:not-allowed;">Next &gt;</span>
+                                    </div>
+                                </div>
                             </div>
                             
                             <!-- Chart of Accounts Tab -->
                             <div class="erp-tab-content" id="tab-chart-accounts">
-                                <div class="erp-page-title">
-                                    📂 5-DIGIT CHART OF ACCOUNTS MASTER INDEX
+                                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #dee2e6; padding-bottom:15px; margin-bottom:15px; font-size:0.75rem; text-transform:uppercase;">
+                                    <div class="erp-page-title" style="margin:0; color:#1a73e8;">
+                                        📂 5-DIGIT CHART OF ACCOUNTS MASTER INDEX
+                                    </div>
+                                    <div style="display:flex; gap:10px;">
+                                        <button class="erp-btn" style="font-size:0.7rem; color:#666;">↗ Full Table View ∧</button>
+                                        <button class="erp-btn erp-btn-primary" style="font-size:0.7rem;">💾 Save Account (F2)</button>
+                                    </div>
                                 </div>
-                                <div style="display:flex; justify-content:flex-end; border-bottom:1px solid #dee2e6; padding-bottom:10px; margin-bottom:15px;">
-                                    <input type="text" class="erp-input" placeholder="Search code, head title, balance..." style="width:250px;">
+
+                                <div class="erp-form-grid" style="grid-template-columns: 1fr 2fr 1fr 1fr 1fr;">
+                                    <div class="erp-form-group">
+                                        <label>Account Code (Auto) <span style="color:#059669; font-size:0.6rem; border:1px solid #a7f3d0; background:#ecfdf5; padding:1px 3px; border-radius:2px; margin-left:5px;">Auto-Next</span></label>
+                                        <input type="text" class="erp-input" value="10702" style="color:#b45309; font-weight:700; background:#f8f9fa;">
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Account Title / Party Name *</label>
+                                        <input type="text" class="erp-input" placeholder="AL-MADINA PLASTIC INDUSTRY">
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Account Type</label>
+                                        <select class="erp-input"><option>Customer (Debtor 10xxx)</option></select>
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Credit Limit (Rs)</label>
+                                        <input type="number" class="erp-input" value="5000000" style="color:#b45309;">
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Payment Terms (Days)</label>
+                                        <input type="number" class="erp-input" value="30">
+                                    </div>
                                 </div>
+                                <div class="erp-form-grid" style="grid-template-columns: 2fr 1fr 1fr 1fr;">
+                                    <div class="erp-form-group">
+                                        <label>Business Address / City / Notes</label>
+                                        <input type="text" class="erp-input" placeholder="Plot 45, Sector 15, Korangi Industrial Area">
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Phone / Mobile</label>
+                                        <input type="text" class="erp-input" placeholder="0300-1234567">
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>NTN #</label>
+                                        <input type="text" class="erp-input" placeholder="1234567-8">
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>GST / STRN #</label>
+                                        <input type="text" class="erp-input" placeholder="01-02-1234-567-89">
+                                    </div>
+                                </div>
+
+                                <div style="display:flex; gap:10px; margin-bottom:15px; font-size:0.75rem; font-weight:600; border-top:1px solid #dee2e6; padding-top:15px;">
+                                    <div style="background:#1a73e8; color:#fff; padding:5px 12px; border-radius:15px; cursor:pointer;">All Heads <span style="background:rgba(255,255,255,0.2); padding:1px 5px; border-radius:10px; font-size:0.65rem;">4</span></div>
+                                    <div style="border:1px solid #dee2e6; padding:5px 12px; border-radius:15px; cursor:pointer;">Customers (10xxx) <span style="color:#059669;">1</span></div>
+                                    <div style="border:1px solid #dee2e6; padding:5px 12px; border-radius:15px; cursor:pointer;">Suppliers (20xxx) <span style="color:#dc2626;">0</span></div>
+                                    <div style="border:1px solid #dee2e6; padding:5px 12px; border-radius:15px; cursor:pointer;">Banks & Cash (90xxx) <span style="color:#1a73e8;">2</span></div>
+                                    <div style="border:1px solid #dee2e6; padding:5px 12px; border-radius:15px; cursor:pointer;">Expenses (80xxx) <span style="color:#8b5cf6;">1</span></div>
+                                    <div style="border:1px solid #dee2e6; padding:5px 12px; border-radius:15px; cursor:pointer;">Capital & Equity (30xxx) <span style="color:#d97706;">0</span></div>
+                                </div>
+                                <div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;">
+                                    <input type="text" class="erp-input" placeholder="🔍 Global search: code, name, category, bal" style="width:300px; font-size:0.75rem;">
+                                    <span style="font-size:0.7rem; color:#666;">Category Net: <strong style="color:#059669;">Rs 600,000.00 Dr</strong></span>
+                                </div>
+
                                 <table class="erp-table">
                                     <thead>
-                                        <tr><th>Code</th><th>Account Head Title</th><th>Level</th><th>Account Type</th><th>Current Balance</th></tr>
+                                        <tr>
+                                            <th>CODE</th>
+                                            <th>ACCOUNT TITLE / PARTY</th>
+                                            <th>CATEGORY</th>
+                                            <th>CLASSIFICATION LEVEL</th>
+                                            <th style="text-align:right;">CREDIT LIMIT</th>
+                                            <th style="text-align:center;">TERMS</th>
+                                            <th style="text-align:right;">CURRENT BALANCE</th>
+                                            <th style="text-align:center;">ACTIONS</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
-                                        <tr><td>30001</td><td>CAPITAL ACCOUNT</td><td>01 Capital</td><td>Capital</td><td style="color:#1a73e8;">Rs 0.00 Cr</td></tr>
-                                        <tr><td>80001</td><td>GENERAL EXPENSES</td><td>03 Expenses</td><td>Expense</td><td style="color:#1a73e8;">Rs 0.00 Dr</td></tr>
-                                        <tr><td>90000</td><td>CASH IN HAND</td><td>10 Banks</td><td>Asset</td><td style="color:#1a73e8;">Rs 0.00 Dr</td></tr>
-                                        <tr><td>90001</td><td>MAIN BANK ACCOUNT</td><td>10 Banks</td><td>Asset</td><td style="color:#1a73e8;">Rs 0.00 Dr</td></tr>
+                                        <tr>
+                                            <td style="font-weight:600; color:#b45309;">10701</td>
+                                            <td style="font-weight:700;">CUSTOMER 1</td>
+                                            <td><span style="background:#ecfdf5; color:#059669; border:1px solid #a7f3d0; padding:2px 6px; border-radius:3px; font-size:0.65rem;">Customer</span></td>
+                                            <td style="color:#666;">08 Debtors</td>
+                                            <td style="text-align:right; color:#666;">Rs 5,000,000.00</td>
+                                            <td style="text-align:center; color:#666;">300</td>
+                                            <td style="text-align:right; font-weight:700; color:#059669;">Rs 600,000.00 Dr</td>
+                                            <td style="text-align:center; font-size:1rem; cursor:pointer;">✏️ 🗑️</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight:600; color:#b45309;">80001</td>
+                                            <td style="font-weight:700;">GENERAL EXPENSES</td>
+                                            <td><span style="background:#f3e8ff; color:#7e22ce; border:1px solid #d8b4fe; padding:2px 6px; border-radius:3px; font-size:0.65rem;">Expense</span></td>
+                                            <td style="color:#666;">03 Expenses</td>
+                                            <td style="text-align:right; color:#666;">—</td>
+                                            <td style="text-align:center; color:#666;">—</td>
+                                            <td style="text-align:right; font-weight:700; color:#555;">Rs 0.00 Dr</td>
+                                            <td style="text-align:center; font-size:1rem; cursor:pointer;">✏️ 🗑️</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight:600; color:#b45309;">90000</td>
+                                            <td style="font-weight:700;">CASH IN HAND</td>
+                                            <td><span style="background:#ccfbf1; color:#0f766e; border:1px solid #5eead4; padding:2px 6px; border-radius:3px; font-size:0.65rem;">Cash</span></td>
+                                            <td style="color:#666;">10 Banks</td>
+                                            <td style="text-align:right; color:#666;">—</td>
+                                            <td style="text-align:center; color:#666;">—</td>
+                                            <td style="text-align:right; font-weight:700; color:#555;">Rs 0.00 Dr</td>
+                                            <td style="text-align:center; font-size:1rem; cursor:pointer;">✏️ 🗑️</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight:600; color:#b45309;">90001</td>
+                                            <td style="font-weight:700;">MAIN BANK ACCOUNT</td>
+                                            <td><span style="background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe; padding:2px 6px; border-radius:3px; font-size:0.65rem;">Bank</span></td>
+                                            <td style="color:#666;">10 Banks</td>
+                                            <td style="text-align:right; color:#666;">—</td>
+                                            <td style="text-align:center; color:#666;">—</td>
+                                            <td style="text-align:right; font-weight:700; color:#555;">Rs 0.00 Dr</td>
+                                            <td style="text-align:center; font-size:1rem; cursor:pointer;">✏️ 🗑️</td>
+                                        </tr>
                                     </tbody>
                                 </table>
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px; font-size:0.7rem; color:#666;">
+                                    <div>Showing <strong>1</strong> to <strong>4</strong> of <strong>4</strong> entries &nbsp;|&nbsp; <span style="border-bottom:1px solid #ccc; cursor:pointer;">50 rows / page</span></div>
+                                    <div style="display:flex; gap:5px; align-items:center;">
+                                        <span style="color:#aaa; cursor:not-allowed;">&lt; Prev</span>
+                                        <span style="background:#1a73e8; color:#fff; padding:3px 8px; border-radius:3px; font-weight:700;">1</span>
+                                        <span style="color:#aaa; cursor:not-allowed;">Next &gt;</span>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Purchase Inward Tab -->
                             <div class="erp-tab-content" id="tab-purchase-inward">
-                                <div class="erp-page-title">
-                                    📥 F2 PURCHASE INWARD (MULTI-ROW STOCK RECEIPT)
-                                </div>
-                                <div class="erp-form-grid">
-                                    <div class="erp-form-group">
-                                        <label>Supplier Account</label>
-                                        <select class="erp-input"><option>Select Supplier</option></select>
+                                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #dee2e6; padding-bottom:15px; margin-bottom:15px; font-size:0.75rem; text-transform:uppercase;">
+                                    <div class="erp-page-title" style="margin:0; color:#b45309; display:flex; align-items:center; gap:10px;">
+                                        F2 PURCHASE INWARD (MULTI-ROW STOCK RECEIPT) 
+                                        <span style="background:#fef3c7; color:#b45309; border:1px solid #fde68a; padding:2px 6px; border-radius:3px; font-size:0.65rem; font-weight:700;">BILL #5001</span>
                                     </div>
+                                    <div style="display:flex; gap:10px;">
+                                        <button class="erp-btn" style="font-size:0.7rem; color:#666;">↗ Full Table View ∧</button>
+                                        <button class="erp-btn erp-btn-primary" style="font-size:0.7rem; background:#d97706; border-color:#d97706;">💾 Save Purchase (F2)</button>
+                                    </div>
+                                </div>
+
+                                <div class="erp-form-grid" style="grid-template-columns: 1fr 1fr 3fr;">
                                     <div class="erp-form-group">
                                         <label>Date</label>
-                                        <input type="date" class="erp-input" value="2026-09-04">
+                                        <input type="date" class="erp-input" value="2026-09-03">
                                     </div>
                                     <div class="erp-form-group">
-                                        <label>Godown</label>
-                                        <select class="erp-input"><option>Main Godown</option></select>
+                                        <label>Supplier Bilty / Inward Inv #</label>
+                                        <input type="text" class="erp-input" value="0">
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <div style="display:flex; justify-content:space-between;">
+                                            <label style="color:#d97706;">Raw Material Supplier Account *</label>
+                                            <span style="color:#d97706; font-size:0.65rem; font-weight:700; cursor:pointer; border:1px solid #fcd34d; background:#fffbeb; padding:1px 5px; border-radius:3px;">+ Quick Add Supplier</span>
+                                        </div>
+                                        <select class="erp-input"><option></option></select>
                                     </div>
                                 </div>
+
+                                <div style="border:1px solid #dee2e6; border-radius:4px; margin-bottom:15px;">
+                                    <div style="display:flex; justify-content:space-between; align-items:center; background:#f8f9fa; padding:10px; border-bottom:1px solid #dee2e6;">
+                                        <div style="font-size:0.75rem; font-weight:700; color:#555;">📦 RAW MATERIAL INWARD GRID (0 LINES)</div>
+                                        <button class="erp-btn erp-btn-primary" style="background:#d97706; border-color:#d97706; font-size:0.65rem; padding:4px 8px;">+ Add Inward Item</button>
+                                    </div>
+                                    <table class="erp-table" style="margin:0;">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Raw Material Grade / Item</th>
+                                                <th style="text-align:center;">Unit</th>
+                                                <th style="text-align:center;">Inward Qty</th>
+                                                <th style="text-align:center;">Pack Wt</th>
+                                                <th style="text-align:center;">Total Net Wt</th>
+                                                <th style="text-align:right;">Purchase Rate</th>
+                                                <th style="text-align:right; color:#059669;">Gross Total (Rs)</th>
+                                                <th style="text-align:center;">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr style="border-bottom:none;"><td colspan="9" style="padding:15px;"></td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:2rem; padding:0 10px;">
+                                    <div>
+                                        <div style="font-size:0.65rem; color:#666; margin-bottom:3px;">Total Quantity & Net Weight:</div>
+                                        <div style="font-size:0.9rem; font-weight:700; color:#b45309;">0 Bags / 0 Kg</div>
+                                    </div>
+                                    <div class="erp-form-group" style="width:250px;">
+                                        <label>Freight / Transport Charges (Rs)</label>
+                                        <input type="number" class="erp-input" value="0">
+                                    </div>
+                                    <div style="text-align:right;">
+                                        <div style="font-size:0.7rem; color:#888; margin-bottom:5px;">Gross: Rs 0.00</div>
+                                        <div style="font-size:1.1rem; font-weight:800; color:#d97706;">Net Bill: Rs 0.00</div>
+                                    </div>
+                                </div>
+
+                                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #dee2e6; padding-bottom:10px; margin-bottom:15px; font-size:0.75rem; text-transform:uppercase; font-weight:700; color:#555; border-top:2px solid #dee2e6; padding-top:15px;">
+                                    <div>PURCHASE INWARD REGISTER (0 OF 0 INWARD BILLS)</div>
+                                    <div style="display:flex; gap:10px; align-items:center;">
+                                        <input type="text" class="erp-input" placeholder="🔍 Search purchase #, supplier, item, ref #, :" style="width:280px; font-size:0.7rem; font-weight:normal; text-transform:none;">
+                                        <span style="color:#d97706; font-size:0.7rem;">Press F2 anytime for Purchase</span>
+                                    </div>
+                                </div>
+
                                 <table class="erp-table">
                                     <thead>
-                                        <tr><th>Item Code</th><th>Description</th><th>Qty (Bags)</th><th>Net Weight</th><th>Rate</th><th>Amount</th></tr>
+                                        <tr>
+                                            <th style="text-align:center;">PURCHASE #</th>
+                                            <th style="text-align:center;">DATE</th>
+                                            <th style="text-align:left;">SUPPLIER NAME</th>
+                                            <th style="text-align:center;">ITEMS</th>
+                                            <th style="text-align:center; color:#1a73e8;">BAGS</th>
+                                            <th style="text-align:center; color:#8b5cf6;">WEIGHT</th>
+                                            <th style="text-align:right; color:#059669;">NET BILL (RS)</th>
+                                            <th style="text-align:center;">STATUS</th>
+                                            <th style="text-align:center;">ACTIONS</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
-                                        <tr><td colspan="6" class="erp-empty-state">No items added to receipt</td></tr>
+                                        <tr><td colspan="9" class="erp-empty-state">No purchase bills recorded yet. Create an inward receipt above!</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -564,23 +791,63 @@
 
                             <!-- Trial Balance Tab -->
                             <div class="erp-tab-content" id="tab-trial-balance">
-                                <div class="erp-page-title">
-                                    ⚖️ F7 TRIAL BALANCE STATEMENT (4 HEADS)
-                                </div>
-                                <div style="display:flex; justify-content:flex-end; border-bottom:1px solid #dee2e6; padding-bottom:10px; margin-bottom:15px;">
-                                    <input type="text" class="erp-input" placeholder="Search code, head title..." style="width:250px;">
+                                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #dee2e6; padding-bottom:10px; margin-bottom:15px;">
+                                    <div class="erp-page-title" style="margin:0; color:#b45309; text-transform:uppercase;">
+                                        F7 TRIAL BALANCE STATEMENT (4 HEADS)
+                                    </div>
+                                    <div>
+                                        <input type="text" class="erp-input" placeholder="🔍 Search code, head title, balance..." style="width:280px; font-size:0.75rem; font-weight:normal; text-transform:none;">
+                                    </div>
                                 </div>
                                 <table class="erp-table">
                                     <thead>
-                                        <tr><th>Code</th><th>Account Head Title</th><th>Level</th><th style="color:#065f46;">Debit (Dr)</th><th style="color:#dc2626;">Credit (Cr)</th></tr>
+                                        <tr>
+                                            <th>CODE</th>
+                                            <th>ACCOUNT HEAD TITLE</th>
+                                            <th>LEVEL</th>
+                                            <th style="text-align:right; color:#059669;">DEBIT (DR)</th>
+                                            <th style="text-align:right; color:#dc2626;">CREDIT (CR)</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
-                                        <tr><td>30001</td><td style="font-weight:700;">CAPITAL ACCOUNT</td><td>01 Capital</td><td style="color:#065f46;">-</td><td style="color:#dc2626;">-</td></tr>
-                                        <tr><td>80001</td><td style="font-weight:700;">GENERAL EXPENSES</td><td>03 Expenses</td><td style="color:#065f46;">-</td><td style="color:#dc2626;">-</td></tr>
-                                        <tr><td>90000</td><td style="font-weight:700;">CASH IN HAND</td><td>10 Banks</td><td style="color:#065f46;">-</td><td style="color:#dc2626;">-</td></tr>
-                                        <tr><td>90001</td><td style="font-weight:700;">MAIN BANK ACCOUNT</td><td>10 Banks</td><td style="color:#065f46;">-</td><td style="color:#dc2626;">-</td></tr>
+                                        <tr>
+                                            <td style="font-weight:600; color:#b45309;">10701</td>
+                                            <td style="font-weight:700;">CUSTOMER 1</td>
+                                            <td style="color:#666;">08 Debtors</td>
+                                            <td style="text-align:right; font-weight:700; color:#059669;">600,000.00</td>
+                                            <td style="text-align:right; color:#dc2626;">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight:600; color:#b45309;">80001</td>
+                                            <td style="font-weight:700;">GENERAL EXPENSES</td>
+                                            <td style="color:#666;">03 Expenses</td>
+                                            <td style="text-align:right; color:#059669;">-</td>
+                                            <td style="text-align:right; color:#dc2626;">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight:600; color:#b45309;">90000</td>
+                                            <td style="font-weight:700;">CASH IN HAND</td>
+                                            <td style="color:#666;">10 Banks</td>
+                                            <td style="text-align:right; color:#059669;">-</td>
+                                            <td style="text-align:right; color:#dc2626;">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight:600; color:#b45309;">90001</td>
+                                            <td style="font-weight:700;">MAIN BANK ACCOUNT</td>
+                                            <td style="color:#666;">10 Banks</td>
+                                            <td style="text-align:right; color:#059669;">-</td>
+                                            <td style="text-align:right; color:#dc2626;">-</td>
+                                        </tr>
                                     </tbody>
                                 </table>
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px; font-size:0.7rem; color:#666;">
+                                    <div>Showing <strong>1</strong> to <strong>4</strong> of <strong>4</strong> entries &nbsp;|&nbsp; <span style="border-bottom:1px solid #ccc; cursor:pointer;">50 rows / page</span></div>
+                                    <div style="display:flex; gap:5px; align-items:center;">
+                                        <span style="color:#aaa; cursor:not-allowed;">&lt; Prev</span>
+                                        <span style="background:#1a73e8; color:#fff; padding:3px 8px; border-radius:3px; font-weight:700;">1</span>
+                                        <span style="color:#aaa; cursor:not-allowed;">Next &gt;</span>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Stock Balance Tab -->
@@ -600,20 +867,46 @@
 
                             <!-- AR/AP Aging Tab -->
                             <div class="erp-tab-content" id="tab-arap-aging">
-                                <div class="erp-page-title">
-                                    ⏳ F10 ACCOUNTS RECEIVABLE (AR) 4-BUCKET OVERDUE AGING ANALYSIS
-                                </div>
-                                <div style="display:flex; justify-content:flex-end; border-bottom:1px solid #dee2e6; padding-bottom:10px; margin-bottom:15px;">
-                                    <input type="text" class="erp-input" placeholder="Search customer name..." style="width:250px;">
+                                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #dee2e6; padding-bottom:10px; margin-bottom:15px;">
+                                    <div class="erp-page-title" style="margin:0; color:#dc2626; text-transform:uppercase;">
+                                        F10 ACCOUNTS RECEIVABLE (AR) 4-BUCKET OVERDUE AGING ANALYSIS (1 CUSTOMERS)
+                                    </div>
+                                    <div>
+                                        <input type="text" class="erp-input" placeholder="🔍 Search customer name, code, overdue b..." style="width:280px; font-size:0.75rem; font-weight:normal; text-transform:none;">
+                                    </div>
                                 </div>
                                 <table class="erp-table">
                                     <thead>
-                                        <tr><th>Code</th><th>Customer Name</th><th style="color:#059669;">0-30 Days</th><th style="color:#d97706;">31-60 Days</th><th style="color:#dc2626;">61-90 Days</th><th style="color:#991b1b;">90+ Days Overdue</th><th>Total Balance</th></tr>
+                                        <tr>
+                                            <th>CODE</th>
+                                            <th>CUSTOMER NAME</th>
+                                            <th style="text-align:right; color:#059669;">0-30 DAYS</th>
+                                            <th style="text-align:right; color:#b45309;">31-60 DAYS</th>
+                                            <th style="text-align:right; color:#b45309;">61-90 DAYS</th>
+                                            <th style="text-align:right; color:#dc2626;">90+ DAYS OVERDUE</th>
+                                            <th style="text-align:right;">TOTAL BALANCE</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
-                                        <tr><td colspan="7" class="erp-empty-state">No customer aging records match your search query.</td></tr>
+                                        <tr>
+                                            <td style="font-weight:600; color:#b45309;">10701</td>
+                                            <td style="font-weight:700;">CUSTOMER 1</td>
+                                            <td style="text-align:right; font-weight:700; color:#059669;">600,000.00</td>
+                                            <td style="text-align:right; color:#666;">-</td>
+                                            <td style="text-align:right; color:#666;">-</td>
+                                            <td style="text-align:right; color:#dc2626;">-</td>
+                                            <td style="text-align:right; font-weight:700;">Rs 600,000.00</td>
+                                        </tr>
                                     </tbody>
                                 </table>
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px; font-size:0.7rem; color:#666;">
+                                    <div>Showing <strong>1</strong> to <strong>1</strong> of <strong>1</strong> entries &nbsp;|&nbsp; <span style="border-bottom:1px solid #ccc; cursor:pointer;">50 rows / page</span></div>
+                                    <div style="display:flex; gap:5px; align-items:center;">
+                                        <span style="color:#aaa; cursor:not-allowed;">&lt; Prev</span>
+                                        <span style="background:#1a73e8; color:#fff; padding:3px 8px; border-radius:3px; font-weight:700;">1</span>
+                                        <span style="color:#aaa; cursor:not-allowed;">Next &gt;</span>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Drive Backup Tab -->
