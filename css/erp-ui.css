@@ -1,0 +1,229 @@
+/* ====== INTERNAL ERP UI MOCKUP ====== */
+.erp-app {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    background-color: #f8f9fa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    overflow: hidden;
+}
+
+/* ERP Header */
+.erp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 1rem;
+    height: 50px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.8rem;
+}
+
+.erp-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+.erp-logo img {
+    height: 20px;
+}
+.erp-logo span {
+    color: #d97706; /* orange-ish for Plastic Dana ERP text */
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.erp-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.erp-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background: #fff;
+    font-weight: 500;
+    color: #555;
+}
+.erp-badge.success {
+    border-color: #a7f3d0;
+    background: #ecfdf5;
+    color: #065f46;
+}
+.erp-badge.success::before {
+    content: '●';
+    color: #10b981;
+    margin-right: 5px;
+}
+
+/* ERP Body */
+.erp-body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* ERP Main Content */
+.erp-main {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.erp-tab-content {
+    display: none;
+    animation: fadeIn 0.2s ease-in;
+}
+.erp-tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ERP Right Sidebar */
+.erp-sidebar {
+    width: 200px;
+    background-color: #fff;
+    border-left: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.erp-sidebar-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #666;
+    padding: 0 1rem 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.erp-nav-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    color: #444;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.1s ease;
+    border-left: 3px solid transparent;
+}
+.erp-nav-btn:hover {
+    background-color: #f1f3f5;
+}
+.erp-nav-btn.active {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+    border-left-color: #1a73e8;
+    font-weight: 600;
+}
+.erp-nav-btn span {
+    font-size: 0.7rem;
+    color: #888;
+    background: #f1f3f5;
+    padding: 2px 4px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+.erp-nav-btn.active span {
+    background: #fff;
+    border-color: #a4c2f4;
+    color: #1a73e8;
+}
+
+/* Reusable UI Components */
+.erp-page-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #b45309; /* Orange shade */
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.erp-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.erp-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.erp-form-group label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.erp-input {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #495057;
+    background: #fff;
+}
+.erp-input:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+.erp-input.highlight {
+    background: #ecfdf5;
+    color: #065f46;
+    border-color: #a7f3d0;
+}
+
+.erp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+
+.erp-table th {
+    background-color: #f8f9fa;
+    color: #1a73e8; /* Blue headers */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 2px solid #dee2e6;
+    border-top: 1px solid #dee2e6;
+}
+
+.erp-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e9ecef;
+    color: #444;
+}
+
+.erp-empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: #888;
+    font-style: italic;
+    font-size: 0.85rem;
+}

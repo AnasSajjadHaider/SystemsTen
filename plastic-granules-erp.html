@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/axis-industrial.css">
 <link rel="stylesheet" href="css/plastic-dana.css">
+<link rel="stylesheet" href="css/erp-ui.css">
 </head>
 <body>
 
@@ -61,22 +62,170 @@
                 </div>
                 <div class="mockup-title">SystemsTen - Plastic Granules ERP</div>
             </div>
-            <div class="mockup-body">
-                <div class="mockup-sidebar">
-                    <button class="mockup-tab active" data-target="img/pd-chart-of-accounts.png">Chart of Accounts</button>
-                    <button class="mockup-tab" data-target="img/pd-purchase-inward.png">Purchase Inward</button>
-                    <button class="mockup-tab" data-target="img/pd-sales-invoicing.png">Sales Invoicing</button>
-                    <button class="mockup-tab" data-target="img/pd-cashier-vouchers.png">Cashier & Vouchers</button>
-                    <button class="mockup-tab" data-target="img/pd-party-ledger.png">Party Ledger</button>
-                    <button class="mockup-tab" data-target="img/pd-credit-debit-notes.png">Credit / Debit Notes</button>
-                    <button class="mockup-tab" data-target="img/pd-trial-balance.png">Trial Balance</button>
-                    <button class="mockup-tab" data-target="img/pd-items-stock.png">Items & Stock</button>
-                    <button class="mockup-tab" data-target="img/pd-arap-aging.png">AR/AP Aging</button>
-                    <button class="mockup-tab" data-target="img/pd-audit-log.png">Audit Log</button>
-                    <button class="mockup-tab" data-target="img/pd-drive-backup.png">Drive Backup</button>
-                </div>
-                <div class="mockup-main">
-                    <img src="img/pd-chart-of-accounts.png" id="mockupImage" alt="Plastic Granules ERP Screenshot">
+            <div class="mockup-body" style="padding:0; background:transparent;">
+                <div class="erp-app">
+                    <div class="erp-header">
+                        <div class="erp-logo">
+                            <span style="background:#111; color:#fff; padding:2px 4px; border-radius:3px;">ST</span>
+                            <strong>SystemsTen</strong> <span>Plastic Granules ERP</span>
+                        </div>
+                        <div class="erp-header-actions">
+                            <span class="erp-badge success">Connected</span>
+                            <span class="erp-badge" style="border:none; background:transparent;">🌙 Dark Mode</span>
+                            <span class="erp-badge">CASH IN HAND: <span style="color:#10b981;">Rs 0.00</span></span>
+                            <span class="erp-badge">MAIN BANK ACCO... <span style="color:#1a73e8;">Rs 0.00</span></span>
+                            <span class="erp-badge" style="color:#1a73e8; border-color:#a4c2f4; background:#e8f0fe;">🛡 Permissions</span>
+                            <div style="display:flex; align-items:center; gap:5px;">
+                                <div style="width:24px; height:24px; background:#ddd; border-radius:50%;"></div>
+                                <div style="display:flex; flex-direction:column; line-height:1;">
+                                    <span style="font-weight:600; font-size:0.75rem;">System Administrator</span>
+                                    <span style="font-size:0.65rem; color:#888;">Admin</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="erp-body">
+                        <!-- Main Content Area -->
+                        <div class="erp-main">
+                            <!-- Items & Stock Tab -->
+                            <div class="erp-tab-content active" id="tab-items-stock">
+                                <div class="erp-page-title">
+                                    📦 PLASTIC GRANULES ITEM MASTER & OPENING STOCK (BAGS/DRUMS | KG/LBS)
+                                </div>
+                                <div class="erp-form-grid">
+                                    <div class="erp-form-group">
+                                        <label>System ID (Auto)</label>
+                                        <input type="text" class="erp-input" value="PRD-0001" readonly style="color:#b45309; font-weight:600; background:#fff8f1; border-color:#fed7aa;">
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Grade / Code (Optional)</label>
+                                        <input type="text" class="erp-input" placeholder="e.g. 500P, pro 1, 5110">
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Full Product Name *</label>
+                                        <input type="text" class="erp-input" value="PP Homopolymer 500P Virgin Dana">
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Polymer Family</label>
+                                        <select class="erp-input"><option>PP (Polypropylene)</option></select>
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Packing Unit</label>
+                                        <select class="erp-input"><option>Bags</option></select>
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Weight Unit</label>
+                                        <select class="erp-input"><option>Kg (Kilograms)</option></select>
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Packing Size</label>
+                                        <input type="number" class="erp-input" value="25">
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Godown / Warehouse</label>
+                                        <select class="erp-input"><option>Main Godown</option></select>
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Stock Qty (Bags)</label>
+                                        <input type="number" class="erp-input" value="100">
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Total Net Weight</label>
+                                        <input type="text" class="erp-input" value="2,500 Kg" readonly style="background:#f1f3f5;">
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Rate / Kg (Rs)</label>
+                                        <input type="number" class="erp-input" value="240">
+                                    </div>
+                                </div>
+                                <div class="erp-form-group" style="margin-bottom:2rem; width:200px;">
+                                    <label style="color:#065f46;">Total Valuation (Rs)</label>
+                                    <input type="text" class="erp-input highlight" value="Rs 600,000.00" readonly>
+                                </div>
+
+                                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #dee2e6; padding-bottom:10px; margin-bottom:15px;">
+                                    <h4 style="font-size:0.75rem; color:#555; text-transform:uppercase;">Registered Products Catalog (0 Items)</h4>
+                                    <div style="display:flex; gap:10px;">
+                                        <input type="text" class="erp-input" placeholder="Search code, name..." style="width:250px;">
+                                    </div>
+                                </div>
+
+                                <table class="erp-table">
+                                    <thead>
+                                        <tr>
+                                            <th>System ID</th>
+                                            <th>Grade / Code</th>
+                                            <th>Product Name</th>
+                                            <th>Polymer</th>
+                                            <th>Packaging</th>
+                                            <th>Weight Unit</th>
+                                            <th>Godown</th>
+                                            <th>Stock Qty</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td colspan="8" class="erp-empty-state">No products registered yet. Add plastic grade above!</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Audit Log Tab -->
+                            <div class="erp-tab-content" id="tab-audit-log">
+                                <div class="erp-page-title">
+                                    🛡 LIVE AUDIT TRAIL & FORENSICS
+                                </div>
+                                <table class="erp-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>Action</th>
+                                            <th>Module</th>
+                                            <th>User</th>
+                                            <th>Activity Details</th>
+                                            <th>Reason</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>9/3/2026, 11:36:46 PM</td>
+                                            <td><span style="color:#065f46; border:1px solid #a7f3d0; background:#ecfdf5; padding:2px 6px; border-radius:3px; font-size:0.7rem;">CREATE</span></td>
+                                            <td style="color:#b45309; font-weight:600;">Account</td>
+                                            <td style="font-weight:600;">System Administrator</td>
+                                            <td>System Administrator logged in.</td>
+                                            <td style="color:#dc2626; font-style:italic;">User Login</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <!-- Placeholder Tab -->
+                            <div class="erp-tab-content" id="tab-placeholder">
+                                <div class="erp-empty-state" style="margin-top: 100px;">
+                                    <div style="font-size:3rem; margin-bottom:1rem;">🚧</div>
+                                    <h3>HTML Layout in Progress</h3>
+                                    <p>I am building out this section to perfectly match the screenshot designs.<br>Check out "Items & Stock" and "Audit Log" for the live HTML demo!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar Navigation -->
+                        <div class="erp-sidebar">
+                            <div class="erp-sidebar-title">QUICK FUNCTION (F)</div>
+                            <button class="erp-nav-btn" data-target="tab-placeholder">Chart of Accou... <span>F1</span></button>
+                            <button class="erp-nav-btn" data-target="tab-placeholder">Purchase Inward <span>F2</span></button>
+                            <button class="erp-nav-btn" data-target="tab-placeholder">Sales Invoicing <span>F3</span></button>
+                            <button class="erp-nav-btn" data-target="tab-placeholder">Cashier & Vouc... <span>F4</span></button>
+                            <button class="erp-nav-btn" data-target="tab-placeholder">Credit / Debit... <span>F6</span></button>
+                            <button class="erp-nav-btn active" data-target="tab-items-stock">Items & Stock <span>F8</span></button>
+                            <button class="erp-nav-btn" data-target="tab-placeholder">Party Ledger <span>F5</span></button>
+                            <button class="erp-nav-btn" data-target="tab-placeholder">Trial Balance <span>F7</span></button>
+                            <button class="erp-nav-btn" data-target="tab-placeholder">Stock Balance <span>F9</span></button>
+                            <button class="erp-nav-btn" data-target="tab-placeholder">AR/AP Aging <span>F10</span></button>
+                            <button class="erp-nav-btn" data-target="tab-audit-log">Audit Log <span>F11</span></button>
+                            <button class="erp-nav-btn" data-target="tab-placeholder">Drive Backup <span>F12</span></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -281,23 +430,26 @@
 (function() {
     const mockupContainer = document.getElementById('mockupContainer');
     const mockupWindow = document.getElementById('mockupWindow');
-    const mockupTabs = document.querySelectorAll('.mockup-tab');
-    const mockupImage = document.getElementById('mockupImage');
+    const erpNavBtns = document.querySelectorAll('.erp-nav-btn');
+    const erpTabs = document.querySelectorAll('.erp-tab-content');
     
     // Tab Switching Logic
-    mockupTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            // Remove active class from all
-            mockupTabs.forEach(t => t.classList.remove('active'));
-            // Add active class to clicked
+    erpNavBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Remove active from all buttons
+            erpNavBtns.forEach(b => b.classList.remove('active'));
+            // Add active to clicked
             this.classList.add('active');
             
-            // Fade out image, change source, fade in
-            mockupImage.style.opacity = '0';
-            setTimeout(() => {
-                mockupImage.src = this.getAttribute('data-target');
-                mockupImage.style.opacity = '1';
-            }, 150);
+            // Hide all tabs
+            erpTabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show targeted tab
+            const targetId = this.getAttribute('data-target');
+            const targetTab = document.getElementById(targetId);
+            if(targetTab) {
+                targetTab.classList.add('active');
+            }
         });
     });
 
