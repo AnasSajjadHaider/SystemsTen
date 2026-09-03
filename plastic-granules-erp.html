@@ -74,7 +74,7 @@
                             <span class="erp-badge" style="border:none; background:transparent;">🌙 Dark Mode</span>
                             <span class="erp-badge">CASH IN HAND: <span style="color:#10b981;">Rs 0.00</span></span>
                             <span class="erp-badge">MAIN BANK ACCO... <span style="color:#1a73e8;">Rs 0.00</span></span>
-                            <span class="erp-badge" style="color:#1a73e8; border-color:#a4c2f4; background:#e8f0fe;">🛡 Permissions</span>
+                            <span class="erp-badge" id="permissions-btn" style="color:#1a73e8; border-color:#a4c2f4; background:#e8f0fe; cursor:pointer;">🛡️ Permissions</span>
                             <div style="display:flex; align-items:center; gap:5px;">
                                 <div style="width:24px; height:24px; background:#ddd; border-radius:50%;"></div>
                                 <div style="display:flex; flex-direction:column; line-height:1;">
@@ -974,6 +974,117 @@
                             <button class="erp-nav-btn" data-target="tab-audit-log">Audit Log <span>F11</span></button>
                             <button class="erp-nav-btn" data-target="tab-drive-backup">Drive Backup <span>F12</span></button>
                         </div>
+
+                        <!-- Permissions Modal -->
+                        <div id="permissions-modal" style="display:none; position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:100; align-items:center; justify-content:center;">
+                            <div style="background:#fff; width:900px; max-width:95%; height:600px; max-height:95%; border-radius:8px; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.2);">
+                                <div style="background:#eef2ff; border-bottom:1px solid #c7d2fe; padding:15px 20px; display:flex; justify-content:space-between; align-items:center;">
+                                    <div style="color:#3b82f6; font-weight:700; font-size:1.1rem; display:flex; align-items:center; gap:10px;">
+                                        <svg width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                                        Admin User & Role Permissions Matrix
+                                    </div>
+                                    <button id="close-permissions" style="background:none; border:none; font-size:1.2rem; cursor:pointer; color:#64748b;">×</button>
+                                </div>
+                                <div style="display:flex; flex:1; overflow:hidden;">
+                                    <div style="width:250px; background:#f8fafc; border-right:1px solid #e2e8f0; padding:20px; overflow-y:auto;">
+                                        <div style="font-size:0.75rem; font-weight:700; color:#475569; margin-bottom:15px; letter-spacing:0.5px;">SELECT USER ACCOUNT</div>
+                                        
+                                        <div style="padding:12px; border-radius:6px; margin-bottom:10px; cursor:pointer; background:#f1f5f9; display:flex; gap:12px; align-items:center;">
+                                            <div style="color:#64748b;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                                            <div>
+                                                <div style="font-weight:600; font-size:0.9rem; color:#334155;">System Administrator</div>
+                                                <div style="font-size:0.75rem; color:#64748b;">Admin</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div style="padding:12px; border-radius:6px; margin-bottom:10px; cursor:pointer; background:#2563eb; color:#fff; display:flex; gap:12px; align-items:center; box-shadow:0 4px 6px -1px rgba(37,99,235,0.2);">
+                                            <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                                            <div>
+                                                <div style="font-weight:600; font-size:0.9rem;">Senior Accountant</div>
+                                                <div style="font-size:0.75rem; opacity:0.8;">Accountant</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div style="padding:12px; border-radius:6px; margin-bottom:10px; cursor:pointer; background:#f1f5f9; display:flex; gap:12px; align-items:center;">
+                                            <div style="color:#64748b;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                                            <div>
+                                                <div style="font-weight:600; font-size:0.9rem; color:#334155;">Billing Operator</div>
+                                                <div style="font-size:0.75rem; color:#64748b;">Operator</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div style="flex:1; padding:20px; overflow-y:auto; background:#fff;">
+                                        <div style="border:1px solid #e2e8f0; border-radius:6px; padding:15px; margin-bottom:25px; display:flex; justify-content:space-between; align-items:center; background:#fafafa;">
+                                            <div>
+                                                <span style="font-weight:700; font-size:1.05rem; color:#1e293b;">Senior Accountant</span>
+                                                <span style="color:#3b82f6; font-size:0.9rem; margin-left:8px;">@accountant (Accountant)</span>
+                                            </div>
+                                            <span style="border:1px solid #22c55e; color:#16a34a; background:#dcfce7; padding:2px 8px; border-radius:4px; font-size:0.7rem; font-weight:700;">ACTIVE</span>
+                                        </div>
+                                        
+                                        <div style="font-weight:700; color:#b45309; font-size:0.85rem; margin-bottom:15px;">📁 1. MODULE ACCESS CONTROLS</div>
+                                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px; margin-bottom:30px;">
+                                            <label style="display:flex; align-items:center; gap:10px; border:1px solid #e2e8f0; padding:12px 15px; border-radius:6px; background:#f8fafc; cursor:pointer;">
+                                                <input type="checkbox" checked style="width:16px; height:16px; accent-color:#94a3b8;">
+                                                <span style="font-weight:600; color:#334155; font-size:0.9rem;">F3 Sales Invoices</span>
+                                            </label>
+                                            <label style="display:flex; align-items:center; gap:10px; border:1px solid #e2e8f0; padding:12px 15px; border-radius:6px; background:#f8fafc; cursor:pointer;">
+                                                <input type="checkbox" checked style="width:16px; height:16px; accent-color:#94a3b8;">
+                                                <span style="font-weight:600; color:#334155; font-size:0.9rem;">F2 Purchase Inward</span>
+                                            </label>
+                                            <label style="display:flex; align-items:center; gap:10px; border:1px solid #e2e8f0; padding:12px 15px; border-radius:6px; background:#f8fafc; cursor:pointer;">
+                                                <input type="checkbox" checked style="width:16px; height:16px; accent-color:#94a3b8;">
+                                                <span style="font-weight:600; color:#334155; font-size:0.9rem;">F4 Cashier & Bank Book</span>
+                                            </label>
+                                            <label style="display:flex; align-items:center; gap:10px; border:1px solid #e2e8f0; padding:12px 15px; border-radius:6px; background:#f8fafc; cursor:pointer;">
+                                                <input type="checkbox" checked style="width:16px; height:16px; accent-color:#94a3b8;">
+                                                <span style="font-weight:600; color:#334155; font-size:0.9rem;">F8 Products / Dana Master</span>
+                                            </label>
+                                            <label style="display:flex; align-items:center; gap:10px; border:1px solid #e2e8f0; padding:12px 15px; border-radius:6px; background:#f8fafc; cursor:pointer;">
+                                                <input type="checkbox" checked style="width:16px; height:16px; accent-color:#94a3b8;">
+                                                <span style="font-weight:600; color:#334155; font-size:0.9rem;">F1 Chart of Accounts</span>
+                                            </label>
+                                            <label style="display:flex; align-items:center; gap:10px; border:1px solid #e2e8f0; padding:12px 15px; border-radius:6px; background:#f8fafc; cursor:pointer;">
+                                                <input type="checkbox" checked style="width:16px; height:16px; accent-color:#94a3b8;">
+                                                <span style="font-weight:600; color:#334155; font-size:0.9rem;">F5-F11 Ledgers & Reports</span>
+                                            </label>
+                                            <label style="grid-column:1 / -1; display:flex; align-items:center; gap:10px; border:1px solid #e2e8f0; padding:12px 15px; border-radius:6px; background:#f8fafc; cursor:pointer;">
+                                                <input type="checkbox" checked style="width:16px; height:16px; accent-color:#94a3b8;">
+                                                <span style="font-weight:600; color:#334155; font-size:0.9rem;">F12 Database Backup & Cloud Sync</span>
+                                            </label>
+                                        </div>
+                                        
+                                        <div style="font-weight:700; color:#dc2626; font-size:0.85rem; margin-bottom:15px; border-top:1px solid #e2e8f0; padding-top:20px;">🔒 2. SENSITIVE ACTION SAFEGUARDS</div>
+                                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px; margin-bottom:20px;">
+                                            <label style="display:flex; align-items:center; gap:10px; border:1px solid #e2e8f0; padding:12px 15px; border-radius:6px; background:#f8fafc; cursor:pointer;">
+                                                <input type="checkbox" checked style="width:16px; height:16px; accent-color:#94a3b8;">
+                                                <span style="font-weight:600; color:#334155; font-size:0.9rem;">Can Edit Existing Vouchers</span>
+                                            </label>
+                                            <label style="display:flex; align-items:center; gap:10px; border:1px solid #e2e8f0; padding:12px 15px; border-radius:6px; background:#f8fafc; cursor:pointer;">
+                                                <input type="checkbox" style="width:16px; height:16px; accent-color:#94a3b8;">
+                                                <span style="font-weight:600; color:#334155; font-size:0.9rem;">Can Cancel / Revert Vouchers</span>
+                                            </label>
+                                            <label style="display:flex; align-items:center; gap:10px; border:1px solid #e2e8f0; padding:12px 15px; border-radius:6px; background:#f8fafc; cursor:pointer;">
+                                                <input type="checkbox" checked style="width:16px; height:16px; accent-color:#94a3b8;">
+                                                <span style="font-weight:600; color:#334155; font-size:0.9rem;">Can View Cash & Bank Balances</span>
+                                            </label>
+                                            <label style="display:flex; align-items:center; gap:10px; border:1px solid #e2e8f0; padding:12px 15px; border-radius:6px; background:#f8fafc; cursor:pointer;">
+                                                <input type="checkbox" checked style="width:16px; height:16px; accent-color:#94a3b8;">
+                                                <span style="font-weight:600; color:#334155; font-size:0.9rem;">Can Export / Download Excel</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="border-top:1px solid #e2e8f0; padding:15px 20px; display:flex; justify-content:flex-end; gap:15px; background:#fff;">
+                                    <button id="cancel-permissions" style="padding:8px 16px; border-radius:6px; border:none; background:#f1f5f9; color:#475569; font-weight:600; cursor:pointer;">Close</button>
+                                    <button style="padding:8px 16px; border-radius:6px; border:none; background:#2563eb; color:#fff; font-weight:600; display:flex; align-items:center; gap:8px; cursor:pointer;">
+                                        💾 Save Permissions
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -1222,6 +1333,25 @@
             // Reset to flat when mouse leaves
             mockupWindow.style.transform = `rotateX(0deg) rotateY(0deg)`;
         });
+    }
+
+    // Permissions Modal Logic
+    const permissionsBtn = document.getElementById('permissions-btn');
+    const permissionsModal = document.getElementById('permissions-modal');
+    const closePermissions = document.getElementById('close-permissions');
+    const cancelPermissions = document.getElementById('cancel-permissions');
+
+    if(permissionsBtn && permissionsModal) {
+        permissionsBtn.addEventListener('click', () => {
+            permissionsModal.style.display = 'flex';
+        });
+        
+        const closeModal = () => {
+            permissionsModal.style.display = 'none';
+        };
+
+        if(closePermissions) closePermissions.addEventListener('click', closeModal);
+        if(cancelPermissions) cancelPermissions.addEventListener('click', closeModal);
     }
 })();
 </script>
