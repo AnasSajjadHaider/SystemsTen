@@ -42,12 +42,25 @@
 </header>
 
 <!-- ====== HERO ====== -->
-<section class="hero hero--center hero--erp" style="padding-bottom: 2rem;">
+<section class="hero hero--center hero--erp" style="padding-bottom: 2.5rem;">
     <div class="hero__grid" aria-hidden="true"></div>
-    <div class="hero__label reveal">Systems Ten Products</div>
+    <div class="hero__label reveal" style="letter-spacing: 0.18em;">THE WORLD'S #1 PURPOSE-BUILT PLASTIC ERP</div>
     <h1 class="hero__title">PLASTIC GRANULES<br>ERP SUITE</h1>
-    <p class="hero__subtitle reveal">Complete Manufacturing & Trading System</p>
-    <p class="hero__desc reveal" style="margin-bottom:2rem">Experience our new flagship ERP built specifically for the PLASTIC GRANULES industry. Fully responsive, secure, and lightning-fast.</p>
+    <p class="hero__subtitle reveal" style="max-width: 850px; margin: 1rem auto 0.5rem; font-size: clamp(1.05rem, 2vw, 1.35rem); line-height: 1.5;">
+        Engineered for Plastic Raw Material Traders, Manufacturers &amp; Recyclers
+    </p>
+    <p class="hero__desc reveal" style="max-width: 800px; margin: 0 auto 1.8rem; opacity: 0.75; font-size: 0.95rem; line-height: 1.7;">
+        Built ground-up for extreme speed, 100% offline-first counter resilience, zero-error dual-unit (Bags &amp; Net Kg) accounting, and automated real-time cloud synchronization.
+    </p>
+    
+    <!-- Feature Pill Badges -->
+    <div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 900px; margin: 0 auto 1rem;">
+        <span class="tag tag--safety" style="font-size: 0.75rem; padding: 0.45em 0.9em; font-weight: 700;">⚡ DUAL UNIT PRECISION (BAGS &amp; KG)</span>
+        <span class="tag tag--filled" style="font-size: 0.75rem; padding: 0.45em 0.9em; font-weight: 700;">📴 100% OFFLINE-FIRST ENGINE</span>
+        <span class="tag" style="font-size: 0.75rem; padding: 0.45em 0.9em; font-weight: 700; background: #e0f2fe; border-color: #0284c7; color: #0369a1;">🔄 REAL-TIME CLOUD DELTA SYNC</span>
+        <span class="tag" style="font-size: 0.75rem; padding: 0.45em 0.9em; font-weight: 700; background: #fef3c7; border-color: #d97706; color: #b45309;">⌨️ KEYBOARD-FIRST (F1–F12)</span>
+        <span class="tag" style="font-size: 0.75rem; padding: 0.45em 0.9em; font-weight: 700; background: #fee2e2; border-color: #dc2626; color: #b91c1c;">🛡️ FORENSIC TRASH VAULT</span>
+    </div>
 </section>
 
 <!-- ====== INTERACTIVE MOCKUP SECTION ====== -->
@@ -1096,92 +1109,392 @@
 <section class="section" id="modules">
     <div class="container">
         <div class="section__header reveal">
-            <div class="section__eyebrow">// Fully Loaded Suite</div>
-            <h2 class="section__title">Software<br>Modules</h2>
+            <div class="section__eyebrow">// Engineered For High-Volume Polymer Trading &amp; Manufacturing</div>
+            <h2 class="section__title">Core Modules<br>Breakdown</h2>
         </div>
         
         <div class="modules-grid reveal">
-            <!-- Card 1 -->
+            <!-- Module 1: Chart of Accounts (F7 / F1) -->
             <div class="module-card">
                 <div>
-                    <div class="module-card__num">ST-M01</div>
-                    <h3 class="module-card__title">Billing & Invoices</h3>
-                    <p class="module-card__desc">Generate clean sales invoices instantly, process credit notes/returns, manage customer lists, and queue prints.</p>
+                    <div class="module-card__num" style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>PL-M01</span>
+                        <span class="tag tag--filled" style="font-size: 0.6rem; padding: 2px 6px;">F1 / F7</span>
+                    </div>
+                    <h3 class="module-card__title">Chart of Accounts</h3>
+                    <p class="module-card__desc">4-Tier tree hierarchy (Assets, Liabilities, Equity, Revenue, Expenses), automated code allocation, credit limit enforcement, and instant party balance verification.</p>
                 </div>
                 <div class="module-card__list">
-                    <span class="tag">Invoice Print</span>
-                    <span class="tag tag--filled">Credit Notes</span>
-                    <span class="tag">Sales Ledger</span>
+                    <span class="tag">4-Tier Hierarchy</span>
+                    <span class="tag tag--filled">Credit Limits</span>
+                    <span class="tag">Auto-Codes</span>
+                </div>
+            </div>
+
+            <!-- Module 2: Product & Stock Master (F8) -->
+            <div class="module-card">
+                <div>
+                    <div class="module-card__num" style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>PL-M02</span>
+                        <span class="tag tag--filled" style="font-size: 0.6rem; padding: 2px 6px;">F8</span>
+                    </div>
+                    <h3 class="module-card__title">Product &amp; Stock Master</h3>
+                    <p class="module-card__desc">Granular polymer classification (PP, HDPE, LDPE, LLDPE, PET, ABS, HIPS, PVC), dual Bag &amp; Net Kg tracking, automated valuation, and live low-stock threshold alerts.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag">PP / HDPE / LDPE</span>
+                    <span class="tag tag--filled">Bags &amp; Net Kg</span>
+                    <span class="tag">Live Valuation</span>
+                </div>
+            </div>
+
+            <!-- Module 3: Sales Invoicing & Gate Pass (F3) -->
+            <div class="module-card module-card--dark">
+                <div>
+                    <div class="module-card__num" style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>PL-M03</span>
+                        <span class="tag tag--safety" style="font-size: 0.6rem; padding: 2px 6px;">F3</span>
+                    </div>
+                    <h3 class="module-card__title">Sales Invoicing &amp; Gate Pass</h3>
+                    <p class="module-card__desc">High-speed counter POS billing, customer ledger auto-posting, automated bag-to-kg math, credit limit lock, instant gate pass generation, and outstanding debt updates.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag">Counter Speed POS</span>
+                    <span class="tag tag--filled">Gate Pass</span>
+                    <span class="tag">Auto-Ledger</span>
+                </div>
+            </div>
+
+            <!-- Module 4: Purchase Inward (F2) -->
+            <div class="module-card">
+                <div>
+                    <div class="module-card__num" style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>PL-M04</span>
+                        <span class="tag tag--filled" style="font-size: 0.6rem; padding: 2px 6px;">F2</span>
+                    </div>
+                    <h3 class="module-card__title">Purchase Inwards</h3>
+                    <p class="module-card__desc">Supplier raw material receipt logging, automatic stock increment in dual UOM (Bags &amp; Net Kgs), multi-godown allocation, freight handling, and supplier AP updates.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag">Multi-Row Inward</span>
+                    <span class="tag tag--filled">AP Ledgers</span>
+                    <span class="tag">Godown Alloc</span>
+                </div>
+            </div>
+
+            <!-- Module 5: Cashier & Bank Register (F4) -->
+            <div class="module-card">
+                <div>
+                    <div class="module-card__num" style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>PL-M05</span>
+                        <span class="tag tag--filled" style="font-size: 0.6rem; padding: 2px 6px;">F4</span>
+                    </div>
+                    <h3 class="module-card__title">Cashier &amp; Bank Register</h3>
+                    <p class="module-card__desc">Cash Receipts (CR), Cash Payments (CP), Bank Receipts (BR), and Bank Payments (BP) with sequence auto-deduplication, quick narration tags, and real-time cash desk balances.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag">CR / CP / BR / BP</span>
+                    <span class="tag tag--filled">Cheque Logs</span>
+                    <span class="tag">Zero Dupes</span>
+                </div>
+            </div>
+
+            <!-- Module 6: Financial Ledgers (F5 / F6) -->
+            <div class="module-card">
+                <div>
+                    <div class="module-card__num" style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>PL-M06</span>
+                        <span class="tag tag--filled" style="font-size: 0.6rem; padding: 2px 6px;">F5 / F6</span>
+                    </div>
+                    <h3 class="module-card__title">Financial Ledgers</h3>
+                    <p class="module-card__desc">Live double-entry customer &amp; supplier statements with customizable date range filters, dual-UOM transaction tracking, running balance calculation, and 1-click formal A4 PDF print.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag">Dual UOM Ledgers</span>
+                    <span class="tag tag--filled">1-Click A4</span>
+                    <span class="tag">Running Bal</span>
+                </div>
+            </div>
+
+            <!-- Module 7: Credit & Debit Notes (F6 / F9) -->
+            <div class="module-card">
+                <div>
+                    <div class="module-card__num" style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>PL-M07</span>
+                        <span class="tag tag--filled" style="font-size: 0.6rem; padding: 2px 6px;">F6 / F9</span>
+                    </div>
+                    <h3 class="module-card__title">Credit &amp; Debit Notes</h3>
+                    <p class="module-card__desc">Process weight discrepancy adjustments, rate difference credits, sales returns, and purchase rejections linked directly to original invoices and stock registers.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag">Weight Adjust</span>
+                    <span class="tag tag--filled">Sales Return</span>
+                    <span class="tag">Stock Reversal</span>
+                </div>
+            </div>
+
+            <!-- Module 8: Executive Business Reports (F10) -->
+            <div class="module-card">
+                <div>
+                    <div class="module-card__num" style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>PL-M08</span>
+                        <span class="tag tag--filled" style="font-size: 0.6rem; padding: 2px 6px;">F7 / F10</span>
+                    </div>
+                    <h3 class="module-card__title">Executive Reports &amp; Aging</h3>
+                    <p class="module-card__desc">Instant 4-column Trial Balance, 4-bucket Overdue AR/AP Aging analysis (0-30, 31-60, 61-90, 90+ days), Godown Stock Valuation, and Profit &amp; Loss reporting.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag">4-Bucket Aging</span>
+                    <span class="tag tag--filled">Trial Balance</span>
+                    <span class="tag">Stock Valuation</span>
+                </div>
+            </div>
+
+            <!-- Module 9: Forensic Vault & Audit Trail (F11/F12) -->
+            <div class="module-card module-card--safety">
+                <div>
+                    <div class="module-card__num" style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>PL-M09</span>
+                        <span class="tag tag--filled" style="font-size: 0.6rem; padding: 2px 6px; background: #000; color: #fff;">F11 / F12</span>
+                    </div>
+                    <h3 class="module-card__title">Forensic Vault &amp; Audits</h3>
+                    <p class="module-card__desc">Tamper-proof audit logs recording user session, timestamp, IP, action type, and exact historical snapshot. Deleted records are archived in a secure forensic vault for fraud prevention.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag tag--filled" style="background:#000; color:#fff;">Forensic Trash</span>
+                    <span class="tag" style="background:rgba(0,0,0,0.1); border-color:#000; color:#000;">Live Trail</span>
+                    <span class="tag tag--filled" style="background:#000; color:#fff;">Cloud Sync</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== WHY PLASTIC GRANULES ERP STANDS ALONE ====== -->
+<section class="section section--surface" id="usps">
+    <div class="container">
+        <div class="section__header reveal">
+            <div class="section__eyebrow">// Unrivaled Excellence In Polymer ERP</div>
+            <h2 class="section__title">Built Exclusively<br>For Plastic Ecosystems</h2>
+            <p style="margin-top: 1.5rem; max-width: 750px; opacity: 0.75; font-size: var(--fs-data); line-height: 1.8;">
+                Traditional generic accounting software fails in the plastic industry because it doesn't understand <strong>Bags vs. Net Kilograms</strong>, <strong>Polymer Grades</strong>, or <strong>High-Speed Factory Counter Demands</strong>. Systems Ten Plastic Granules ERP is built ground-up exclusively for polymer manufacturing, recycling, and raw material distribution.
+            </p>
+        </div>
+
+        <div class="modules-grid reveal" style="margin-top: 2rem;">
+            <!-- USP 1 -->
+            <div class="module-card">
+                <div>
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">⚡</div>
+                    <h3 class="module-card__title">Dual Unit Precision</h3>
+                    <p class="module-card__desc">Seamlessly bill in standard packaging (25kg / 50kg bags) and exact net weight in kilograms with instant dual-UOM mathematics and automated stock ledger reconciliation.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag tag--filled">Bags &amp; Net Kg</span>
+                    <span class="tag">Zero Discrepancy</span>
+                </div>
+            </div>
+
+            <!-- USP 2 -->
+            <div class="module-card module-card--dark">
+                <div>
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">📴</div>
+                    <h3 class="module-card__title">100% Offline-First Engine</h3>
+                    <p class="module-card__desc">Counter billing, inward receiving, voucher recording, and customer ledger lookups NEVER stop, even during ISP outages, router disconnects, or central server downtime.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag tag--safety">Zero Downtime</span>
+                    <span class="tag">Local Cache</span>
+                </div>
+            </div>
+
+            <!-- USP 3 -->
+            <div class="module-card">
+                <div>
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🔄</div>
+                    <h3 class="module-card__title">Real-Time Cloud Delta Sync</h3>
+                    <p class="module-card__desc">Ultra-light background sync mechanism automatically streams local transactions to central cloud storage without database record lockouts or counter speed degradation.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag tag--filled">Delta Sync</span>
+                    <span class="tag">Zero Collision</span>
+                </div>
+            </div>
+
+            <!-- USP 4 -->
+            <div class="module-card">
+                <div>
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">⌨️</div>
+                    <h3 class="module-card__title">Keyboard-First Navigation</h3>
+                    <p class="module-card__desc">Complete entire sales invoices, purchase inwards, payments, and balance audits in seconds using rapid F1–F12 hotkey commands without ever having to touch the mouse.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag tag--filled">F1–F12 Shortcuts</span>
+                    <span class="tag">Counter Speed</span>
+                </div>
+            </div>
+
+            <!-- USP 5 -->
+            <div class="module-card">
+                <div>
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🏢</div>
+                    <h3 class="module-card__title">Multi-Counter Terminal Isolation</h3>
+                    <p class="module-card__desc">Completely prevents voucher sequence collisions across Counter A, B, or C with intelligent automated terminal-prefixing and instant background multi-register ledger consolidation.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag tag--filled">Terminal Isolation</span>
+                    <span class="tag">Multi-Till POS</span>
+                </div>
+            </div>
+
+            <!-- USP 6 -->
+            <div class="module-card module-card--safety">
+                <div>
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🛡️</div>
+                    <h3 class="module-card__title">Forensic Vault &amp; Audit Trail</h3>
+                    <p class="module-card__desc">Immutable event logging for every voucher generation, rate edit, or cancellation. Deleted records are retained in an encrypted forensic vault for total fraud prevention.</p>
+                </div>
+                <div class="module-card__list">
+                    <span class="tag tag--filled" style="background:#000; color:#fff;">Fraud Protection</span>
+                    <span class="tag" style="background:rgba(0,0,0,0.1); border-color:#000; color:#000;">Audit Logs</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== TARGET BUSINESS VERTICALS ====== -->
+<section class="section" id="target-industries">
+    <div class="container">
+        <div class="section__header reveal">
+            <div class="section__eyebrow">// Purpose-Engineered Deployment</div>
+            <h2 class="section__title">Best For What<br>Enterprises?</h2>
+            <p style="margin-top: 1.5rem; max-width: 700px; opacity: 0.75; font-size: var(--fs-data); line-height: 1.8;">
+                Optimized specifically for high-volume polymer manufacturing plants, commercial recycling yards, and raw material trading companies across the country.
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 3rem;" class="reveal">
+            <!-- Industry 1 -->
+            <div style="border: var(--border); padding: 1.8rem; background: var(--base); box-shadow: var(--shadow);">
+                <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.8rem;">
+                    <span style="font-size: 1.6rem;">🏭</span>
+                    <h3 style="font-size: 1.15rem; font-family: 'Space Grotesk', sans-serif; font-weight: 700; margin: 0;">Plastic Granules Compounding</h3>
+                </div>
+                <p style="font-size: 0.85rem; opacity: 0.75; line-height: 1.7; margin: 0;">
+                    Tailored for masterbatch compounders and polymer processors tracking batch weights, polymer grades, and bag inventories.
+                </p>
+            </div>
+
+            <!-- Industry 2 -->
+            <div style="border: var(--border); padding: 1.8rem; background: var(--base); box-shadow: var(--shadow);">
+                <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.8rem;">
+                    <span style="font-size: 1.6rem;">♻️</span>
+                    <h3 style="font-size: 1.15rem; font-family: 'Space Grotesk', sans-serif; font-weight: 700; margin: 0;">Plastic Recycling &amp; Reprocessing</h3>
+                </div>
+                <p style="font-size: 0.85rem; opacity: 0.75; line-height: 1.7; margin: 0;">
+                    Scrap inward weighing, washing loss adjustments, re-granulation yield tracking, and graded bag distribution.
+                </p>
+            </div>
+
+            <!-- Industry 3 -->
+            <div style="border: var(--border); padding: 1.8rem; background: var(--base); box-shadow: var(--shadow);">
+                <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.8rem;">
+                    <span style="font-size: 1.6rem;">📦</span>
+                    <h3 style="font-size: 1.15rem; font-family: 'Space Grotesk', sans-serif; font-weight: 700; margin: 0;">Raw Material Importers &amp; Bulk Traders</h3>
+                </div>
+                <p style="font-size: 0.85rem; opacity: 0.75; line-height: 1.7; margin: 0;">
+                    Container-level stock receiving, godown-to-godown transfer orders, dual-currency valuation, and high-volume commercial invoicing.
+                </p>
+            </div>
+
+            <!-- Industry 4 -->
+            <div style="border: var(--border); padding: 1.8rem; background: var(--base); box-shadow: var(--shadow);">
+                <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.8rem;">
+                    <span style="font-size: 1.6rem;">🥤</span>
+                    <h3 style="font-size: 1.15rem; font-family: 'Space Grotesk', sans-serif; font-weight: 700; margin: 0;">Injection &amp; Blow Moulding Units</h3>
+                </div>
+                <p style="font-size: 0.85rem; opacity: 0.75; line-height: 1.7; margin: 0;">
+                    Production floor raw material dispatching, runner scrap accounting, and finished article costing for bottles, caps, and preforms.
+                </p>
+            </div>
+
+            <!-- Industry 5 -->
+            <div style="border: var(--border); padding: 1.8rem; background: var(--base); box-shadow: var(--shadow);">
+                <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.8rem;">
+                    <span style="font-size: 1.6rem;">🛍️</span>
+                    <h3 style="font-size: 1.15rem; font-family: 'Space Grotesk', sans-serif; font-weight: 700; margin: 0;">Packaging, Film &amp; Extrusion Plants</h3>
+                </div>
+                <p style="font-size: 0.85rem; opacity: 0.75; line-height: 1.7; margin: 0;">
+                    Roll extrusion tracking, masterbatch blending ratios, shopping bag production counts, and warehouse dispatch billing.
+                </p>
+            </div>
+
+            <!-- Industry 6 -->
+            <div style="border: var(--border); padding: 1.8rem; background: var(--base); box-shadow: var(--shadow);">
+                <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.8rem;">
+                    <span style="font-size: 1.6rem;">🧪</span>
+                    <h3 style="font-size: 1.15rem; font-family: 'Space Grotesk', sans-serif; font-weight: 700; margin: 0;">Masterbatch &amp; Chemical Additive Distributors</h3>
+                </div>
+                <p style="font-size: 0.85rem; opacity: 0.75; line-height: 1.7; margin: 0;">
+                    Tracking pigment additives, optical brighteners, calcium carbonate fillers, and specialty polymer additives with strict lot numbering.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== MODERN TECH STACK & ARCHITECTURE ====== -->
+<section class="section section--surface" id="architecture">
+    <div class="container">
+        <div class="section__header reveal">
+            <div class="section__eyebrow">// High-Performance Architecture</div>
+            <h2 class="section__title">Enterprise<br>Technology Stack</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 3rem;" class="reveal">
+            <!-- Card 1 -->
+            <div style="border: var(--border); padding: 1.8rem; background: var(--base); box-shadow: var(--shadow);">
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--muted); text-transform: uppercase; margin-bottom: 0.8rem;">Client Interface</div>
+                <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; margin-bottom: 0.6rem;">Modern High-Speed UI</h4>
+                <p style="font-size: 0.85rem; opacity: 0.75; line-height: 1.7; margin-bottom: 1.2rem;">Ultra-responsive keyboard-first interface built for counter speed and zero lag during peak factory hours.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                    <span class="tag tag--filled" style="font-size: 0.65rem;">React 18</span>
+                    <span class="tag" style="font-size: 0.65rem;">TypeScript</span>
+                    <span class="tag tag--filled" style="font-size: 0.65rem;">Tailwind CSS</span>
                 </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="module-card">
-                <div>
-                    <div class="module-card__num">ST-M02</div>
-                    <h3 class="module-card__title">Inventory & Stocks</h3>
-                    <p class="module-card__desc">Keep track of product stock count in real-time. Log stock additions, modifications, adjustments, and warehouse limits.</p>
-                </div>
-                <div class="module-card__list">
-                    <span class="tag">Stock Ledger</span>
-                    <span class="tag tag--filled">Adjustments</span>
-                    <span class="tag">Alert Limits</span>
+            <div style="border: var(--border); padding: 1.8rem; background: var(--base); box-shadow: var(--shadow);">
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--muted); text-transform: uppercase; margin-bottom: 0.8rem;">Local Engine</div>
+                <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; margin-bottom: 0.6rem;">Client-Side Offline Engine</h4>
+                <p style="font-size: 0.85rem; opacity: 0.75; line-height: 1.7; margin-bottom: 1.2rem;">Full in-browser transactional database holding product grades, customer ledgers, and voucher buffers without cloud dependency.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                    <span class="tag tag--safety" style="font-size: 0.65rem;">Local IndexedDB</span>
+                    <span class="tag" style="font-size: 0.65rem;">Zero-Latency</span>
                 </div>
             </div>
 
-            <!-- Card 3 (Dark) -->
-            <div class="module-card module-card--dark">
-                <div>
-                    <div class="module-card__num">ST-M03</div>
-                    <h3 class="module-card__title">Double Entry Ledger</h3>
-                    <p class="module-card__desc">Keep detailed transaction registers for customers and suppliers. Instantly audit histories and pending balances.</p>
-                </div>
-                <div class="module-card__list">
-                    <span class="tag">Cust. Ledgers</span>
-                    <span class="tag tag--filled">Supp. Ledgers</span>
-                    <span class="tag">Pending Bills</span>
+            <!-- Card 3 -->
+            <div style="border: var(--border); padding: 1.8rem; background: var(--base); box-shadow: var(--shadow);">
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--muted); text-transform: uppercase; margin-bottom: 0.8rem;">Cloud Synchronization</div>
+                <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; margin-bottom: 0.6rem;">Delta Background Sync</h4>
+                <p style="font-size: 0.85rem; opacity: 0.75; line-height: 1.7; margin-bottom: 1.2rem;">Lightweight automated background worker syncing offline vouchers seamlessly whenever connectivity is restored.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                    <span class="tag tag--filled" style="font-size: 0.65rem;">Delta ETag Sync</span>
+                    <span class="tag" style="font-size: 0.65rem;">Non-Destructive</span>
                 </div>
             </div>
 
             <!-- Card 4 -->
-            <div class="module-card">
-                <div>
-                    <div class="module-card__num">ST-M04</div>
-                    <h3 class="module-card__title">Cash Flow & Banks</h3>
-                    <p class="module-card__desc">Log multi-bank balances, record receipt cash logs, file payment entries, and track starting & ending register accounts.</p>
-                </div>
-                <div class="module-card__list">
-                    <span class="tag">Bank Balance</span>
-                    <span class="tag tag--filled">Receipts</span>
-                    <span class="tag">Payments</span>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="module-card">
-                <div>
-                    <div class="module-card__num">ST-M05</div>
-                    <h3 class="module-card__title">Role Authorities</h3>
-                    <p class="module-card__desc">Secure administrator controls. Create secondary cashiers or auditor roles with custom read/write permissions.</p>
-                </div>
-                <div class="module-card__list">
-                    <span class="tag">Admin Panel</span>
-                    <span class="tag tag--filled">Staff Roles</span>
-                    <span class="tag">Access Logs</span>
-                </div>
-            </div>
-
-            <!-- Card 6 (Safety) -->
-            <div class="module-card module-card--safety">
-                <div>
-                    <div class="module-card__num">ST-M06</div>
-                    <h3 class="module-card__title">Audits & Reports</h3>
-                    <p class="module-card__desc">Export sales summaries, tax audits, cashier logs, and monthly income statements in standard CSV/PDF formats.</p>
-                </div>
-                <div class="module-card__list">
-                    <span class="tag">PDF Statements</span>
-                    <span class="tag tag--filled">Monthly Stats</span>
-                    <span class="tag">Audit Trail</span>
+            <div style="border: var(--border); padding: 1.8rem; background: var(--base); box-shadow: var(--shadow);">
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--muted); text-transform: uppercase; margin-bottom: 0.8rem;">Deployment Options</div>
+                <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; margin-bottom: 0.6rem;">Cross-Platform Deployment</h4>
+                <p style="font-size: 0.85rem; opacity: 0.75; line-height: 1.7; margin-bottom: 1.2rem;">Deploy as a lightweight Windows 10/11 desktop executable (.exe) for till counters or access securely via central web portal.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                    <span class="tag tag--filled" style="font-size: 0.65rem;">Windows .exe</span>
+                    <span class="tag tag--safety" style="font-size: 0.65rem;">Secure Web</span>
                 </div>
             </div>
         </div>
@@ -1196,7 +1509,7 @@
                 <div class="section__eyebrow">// Showcase request</div>
                 <h2 class="section__title">Get a Custom<br>ERP Demo</h2>
                 <p style="margin-top: 1.5rem; opacity: 0.7; font-size: var(--fs-data); line-height: 1.8;">
-                    Let us know what kind of shop you operate (sanitary, ceramics, hardware, grocery, etc.). We will configure a custom demo instance for your staff to test.
+                    Let us know what kind of plastic enterprise you operate (Dana compounding, recycling, raw material trading, film extrusion, injection moulding). We will configure an interactive demo instance tailored to your bag/kg workflow.
                 </p>
                 <div style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
                     <div>
@@ -1208,7 +1521,7 @@
             
             <div class="reveal contact__form-container">
                 <form action="https://formsubmit.co/infosystemsten@gmail.com" method="POST" class="contact-form">
-                    <input type="hidden" name="_subject" value="New Shop ERP Demo Request - Systems Ten">
+                    <input type="hidden" name="_subject" value="New Plastic Granules ERP Demo Request - Systems Ten">
                     <input type="hidden" name="_template" value="table">
                     
                     <div class="contact-form__row">
@@ -1217,7 +1530,7 @@
                             <input type="text" id="name" name="name" required style="padding: 0.8rem; border: var(--border-thin); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; background: var(--base); outline: none;">
                         </div>
                         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                            <label for="shop" style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Shop / Business Name</label>
+                            <label for="shop" style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Factory / Business Name</label>
                             <input type="text" id="shop" name="shop" required style="padding: 0.8rem; border: var(--border-thin); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; background: var(--base); outline: none;">
                         </div>
                     </div>
@@ -1236,12 +1549,13 @@
                     <div style="display: flex; flex-direction: column; gap: 0.5rem;">
                         <label for="type" style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Business Vertical</label>
                         <select id="type" name="business_vertical" style="padding: 0.8rem; border: var(--border-thin); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; background: var(--base); outline: none;">
-                            <option value="Sanitary Shop">Sanitary & Tile Shop</option>
-                            <option value="Hardware / Electrical">Hardware & Electrical Shop</option>
-                            <option value="Ceramics / Marbles">Ceramics & Marbles Shop</option>
-                            <option value="Wholesale Retail">Wholesale & General Retail</option>
-                            <option value="Multi-Shop Chain">Multi-Shop Chain Operations</option>
-                            <option value="Other">Other Retail Business</option>
+                            <option value="Plastic Granules Compounding">Plastic Granules Compounding Plant</option>
+                            <option value="Plastic Recycling & Reprocessing">Plastic Recycling &amp; Reprocessing Facility</option>
+                            <option value="Polymer Raw Material Bulk Trading">Polymer Raw Material Importer / Bulk Trader</option>
+                            <option value="Injection & Blow Moulding">Injection &amp; Blow Moulding Manufacturer</option>
+                            <option value="Packaging & Film Extrusion">Packaging, Film &amp; Extrusion Producer</option>
+                            <option value="Masterbatch & Chemical Additives">Masterbatch &amp; Additive Distribution</option>
+                            <option value="Other Plastic Manufacturing">Other Plastic Manufacturing Business</option>
                         </select>
                     </div>
                     
