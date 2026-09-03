@@ -362,31 +362,104 @@
 
                             <!-- Cashier & Vouchers Tab -->
                             <div class="erp-tab-content" id="tab-cashier-vouchers">
-                                <div class="erp-page-title">
-                                    💸 CASHIER & VOUCHERS (RECEIPTS / PAYMENTS)
+                                <!-- Top Action Bar -->
+                                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #dee2e6; padding-bottom:15px; margin-bottom:15px; font-size:0.75rem; text-transform:uppercase;">
+                                    <div style="display:flex; gap:15px;">
+                                        <span style="color:#666;">CASH IN HAND: <strong style="color:#10b981;">Rs 0.00</strong></span>
+                                        <span style="color:#666;">MAIN BANK ACCOUNT: <strong style="color:#1a73e8;">Rs 0.00</strong></span>
+                                        <span style="color:#666;">Selected Head Balance: <strong style="color:#10b981;">Rs 600,000.00 Dr</strong></span>
+                                    </div>
+                                    <div style="display:flex; gap:10px;">
+                                        <button class="erp-btn" style="font-size:0.7rem; color:#666;">↗ Full Table View ∧</button>
+                                        <button class="erp-btn erp-btn-primary" style="font-size:0.7rem; background:#059669; border-color:#059669;">💾 Save Voucher (Enter / F2)</button>
+                                    </div>
                                 </div>
-                                <div class="erp-form-grid">
+
+                                <!-- Forms -->
+                                <div class="erp-form-grid" style="grid-template-columns: 1fr 1fr 1fr 2fr 1fr;">
+                                    <div class="erp-form-group">
+                                        <label>Entry # (Auto)</label>
+                                        <input type="text" class="erp-input" value="74713" readonly style="background:#f1f3f5; color:#b45309; font-weight:700;">
+                                    </div>
                                     <div class="erp-form-group">
                                         <label>Date</label>
-                                        <input type="date" class="erp-input" value="2026-09-04">
+                                        <input type="date" class="erp-input" value="2026-09-03">
                                     </div>
                                     <div class="erp-form-group">
-                                        <label>Voucher Type</label>
-                                        <select class="erp-input"><option>Cash Receipt</option><option>Cash Payment</option></select>
+                                        <label>Book Type</label>
+                                        <select class="erp-input"><option>Cash Book</option></select>
                                     </div>
                                     <div class="erp-form-group">
-                                        <label>Account Head</label>
-                                        <select class="erp-input"><option>Select Account</option></select>
+                                        <label>Transaction Flow</label>
+                                        <div style="display:flex; gap:5px; height:100%;">
+                                            <button class="erp-btn erp-btn-primary" style="flex:1; background:#059669; border-color:#059669; font-size:0.7rem;">Receipt (Cr Party)</button>
+                                            <button class="erp-btn" style="flex:1; background:#f1f3f5; color:#666; font-size:0.7rem; border-color:#ced4da;">Payment (Dr Party)</button>
+                                        </div>
                                     </div>
                                     <div class="erp-form-group">
-                                        <label>Amount (Rs)</label>
-                                        <input type="number" class="erp-input" value="0.00">
-                                    </div>
-                                    <div class="erp-form-group" style="grid-column: span 2;">
-                                        <label>Narration / Details</label>
-                                        <input type="text" class="erp-input" placeholder="Enter transaction details...">
+                                        <label style="color:#059669;">Amount (Rs) *</label>
+                                        <input type="number" class="erp-input" value="50000" style="color:#059669; font-weight:700;">
                                     </div>
                                 </div>
+
+                                <div class="erp-form-grid" style="grid-template-columns: 2fr 2fr 1.5fr 1fr;">
+                                    <div class="erp-form-group">
+                                        <label style="color:#1a73e8;">Party / Expense Head *</label>
+                                        <select class="erp-input" style="font-weight:600;"><option>10701 - CUSTOMER 1 (08 Debtors) [Bal: Rs 600,000.00 Dr]</option></select>
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label style="color:#059669;">Cash Account *</label>
+                                        <select class="erp-input" style="font-weight:600;"><option>90000 - CASH IN HAND [Bal: Rs 0.00]</option></select>
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Cheque # (If Bank)</label>
+                                        <input type="text" class="erp-input" value="CHQ-89012" style="color:#888;">
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Cheque Date</label>
+                                        <input type="text" class="erp-input" placeholder="mm/dd/yyyy" style="color:#888;">
+                                    </div>
+                                </div>
+
+                                <div class="erp-form-group" style="margin-bottom:2rem;">
+                                    <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+                                        <label>Narration / Particulars / Remarks</label>
+                                        <div style="display:flex; gap:5px; font-size:0.65rem; color:#888; align-items:center;">
+                                            <span>Quick:</span>
+                                            <span style="background:#f1f3f5; padding:2px 5px; border-radius:3px; border:1px solid #ddd; cursor:pointer;">Payment Received</span>
+                                            <span style="background:#f1f3f5; padding:2px 5px; border-radius:3px; border:1px solid #ddd; cursor:pointer;">Advance Received</span>
+                                            <span style="background:#f1f3f5; padding:2px 5px; border-radius:3px; border:1px solid #ddd; cursor:pointer;">Cheque Cleared</span>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="erp-input" value="Cash Received on Account" style="font-weight:600;">
+                                </div>
+
+                                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #dee2e6; padding-bottom:10px; margin-bottom:15px; font-size:0.75rem; text-transform:uppercase; font-weight:700; color:#555;">
+                                    <div>DAILY CASH / BANK TRANSACTIONS REGISTER (0 OF 0 ENTRIES)</div>
+                                    <div style="display:flex; gap:10px; align-items:center;">
+                                        <input type="text" class="erp-input" placeholder="🔍 Search entry #, date, type, account, narr..." style="width:280px; font-size:0.7rem; font-weight:normal; text-transform:none;">
+                                        <span style="color:#059669; font-size:0.7rem;">Press F4 anytime for Cashier</span>
+                                    </div>
+                                </div>
+
+                                <table class="erp-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="text-align:center;">ENTRY #</th>
+                                            <th style="text-align:center;">DATE</th>
+                                            <th style="text-align:center;">TYPE</th>
+                                            <th style="text-align:center;">ACCOUNT NAME</th>
+                                            <th style="text-align:center; color:#059669;">RECEIPT (CR)</th>
+                                            <th style="text-align:center; color:#dc2626;">PAYMENT (DR)</th>
+                                            <th style="text-align:center;">NARRATION</th>
+                                            <th style="text-align:center;">STATUS</th>
+                                            <th style="text-align:center;">ACTIONS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td colspan="9" class="erp-empty-state">No cash or bank entries recorded yet.</td></tr>
+                                    </tbody>
+                                </table>
                             </div>
 
                             <!-- Party Ledger (Print Preview) -->
