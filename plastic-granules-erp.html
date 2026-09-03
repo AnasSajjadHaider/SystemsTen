@@ -199,12 +199,395 @@
                                 </table>
                             </div>
                             
-                            <!-- Placeholder Tab -->
-                            <div class="erp-tab-content" id="tab-placeholder">
-                                <div class="erp-empty-state" style="margin-top: 100px;">
-                                    <div style="font-size:3rem; margin-bottom:1rem;">🚧</div>
-                                    <h3>HTML Layout in Progress</h3>
-                                    <p>I am building out this section to perfectly match the screenshot designs.<br>Check out "Items & Stock" and "Audit Log" for the live HTML demo!</p>
+                            <!-- Chart of Accounts Tab -->
+                            <div class="erp-tab-content" id="tab-chart-accounts">
+                                <div class="erp-page-title">
+                                    📂 5-DIGIT CHART OF ACCOUNTS MASTER INDEX
+                                </div>
+                                <div style="display:flex; justify-content:flex-end; border-bottom:1px solid #dee2e6; padding-bottom:10px; margin-bottom:15px;">
+                                    <input type="text" class="erp-input" placeholder="Search code, head title, balance..." style="width:250px;">
+                                </div>
+                                <table class="erp-table">
+                                    <thead>
+                                        <tr><th>Code</th><th>Account Head Title</th><th>Level</th><th>Account Type</th><th>Current Balance</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>30001</td><td>CAPITAL ACCOUNT</td><td>01 Capital</td><td>Capital</td><td style="color:#1a73e8;">Rs 0.00 Cr</td></tr>
+                                        <tr><td>80001</td><td>GENERAL EXPENSES</td><td>03 Expenses</td><td>Expense</td><td style="color:#1a73e8;">Rs 0.00 Dr</td></tr>
+                                        <tr><td>90000</td><td>CASH IN HAND</td><td>10 Banks</td><td>Asset</td><td style="color:#1a73e8;">Rs 0.00 Dr</td></tr>
+                                        <tr><td>90001</td><td>MAIN BANK ACCOUNT</td><td>10 Banks</td><td>Asset</td><td style="color:#1a73e8;">Rs 0.00 Dr</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Purchase Inward Tab -->
+                            <div class="erp-tab-content" id="tab-purchase-inward">
+                                <div class="erp-page-title">
+                                    📥 F2 PURCHASE INWARD (MULTI-ROW STOCK RECEIPT)
+                                </div>
+                                <div class="erp-form-grid">
+                                    <div class="erp-form-group">
+                                        <label>Supplier Account</label>
+                                        <select class="erp-input"><option>Select Supplier</option></select>
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Date</label>
+                                        <input type="date" class="erp-input" value="2026-09-04">
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Godown</label>
+                                        <select class="erp-input"><option>Main Godown</option></select>
+                                    </div>
+                                </div>
+                                <table class="erp-table">
+                                    <thead>
+                                        <tr><th>Item Code</th><th>Description</th><th>Qty (Bags)</th><th>Net Weight</th><th>Rate</th><th>Amount</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td colspan="6" class="erp-empty-state">No items added to receipt</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Sales Invoicing (Print Preview) -->
+                            <div class="erp-tab-content" id="tab-sales-invoicing">
+                                <div class="erp-print-modal">
+                                    <div class="erp-print-header">
+                                        <div class="erp-print-title">📄 Formal Document Preview (SALES INVOICE)</div>
+                                        <div>
+                                            <button class="erp-btn erp-btn-primary">⎙ Print A4 Invoice</button>
+                                            <button class="erp-btn">✕ Close</button>
+                                        </div>
+                                    </div>
+                                    <div class="erp-a4-page">
+                                        <div class="invoice-header">
+                                            <div style="display:flex; gap:10px; align-items:center;">
+                                                <div style="background:#000; color:#d97706; padding:5px; font-weight:900;">s|t</div>
+                                                <div>
+                                                    <div style="font-weight:900; font-size:1.1rem;">SYSTEMSTEN PLASTIC GRANULES ERP</div>
+                                                    <div style="font-size:0.7rem; color:#666;">Raw Material & Granules Trading | Main Godown, Industrial Area</div>
+                                                </div>
+                                            </div>
+                                            <div style="text-align:right;">
+                                                <h2 style="margin:0; text-decoration:underline;">SALES INVOICE</h2>
+                                                <div style="font-size:0.7rem; color:#666;">Page 1 of 1</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="invoice-boxes">
+                                            <div class="invoice-box">
+                                                <div class="invoice-box-title">Buyer's Profile</div>
+                                                <div style="font-weight:700; font-size:0.9rem; margin-bottom:5px;">CUSTOMER 1</div>
+                                                <div>Account Code: <strong>10701</strong></div>
+                                                <div>Commercial Market / Industrial Area</div>
+                                                <div>Tel / Mob: +92 328 2790838</div>
+                                            </div>
+                                            <div class="invoice-box">
+                                                <div class="invoice-box-title">Our Reference</div>
+                                                <div style="display:flex; justify-content:space-between;"><span>Invoice #:</span> <strong>INV-11697</strong></div>
+                                                <div style="display:flex; justify-content:space-between;"><span>Dated:</span> <strong>2026-09-03</strong></div>
+                                                <div style="display:flex; justify-content:space-between;"><span>Ref. #:</span> <strong>0</strong></div>
+                                                <div style="display:flex; justify-content:space-between;"><span>Delivery / DO:</span> <strong>-</strong></div>
+                                                <div style="display:flex; justify-content:space-between;"><span>Terms:</span> <strong>30 Days (Due: 2026-10-03)</strong></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <table class="invoice-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>S.NO</th>
+                                                    <th style="text-align:left;">DESCRIPTION OF GOODS</th>
+                                                    <th>QUANTITY</th>
+                                                    <th>NET WT</th>
+                                                    <th>RATE / UNIT</th>
+                                                    <th>AMOUNT (PKR)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr style="text-align:center;">
+                                                    <td>1</td>
+                                                    <td style="text-align:left; font-weight:700;">PRD-0001 - product 1</td>
+                                                    <td>50 Bags</td>
+                                                    <td>1,250 Kg</td>
+                                                    <td>Rs 240.00</td>
+                                                    <td style="font-weight:700;">Rs 300,000.00</td>
+                                                </tr>
+                                                <tr style="text-align:center;">
+                                                    <td>2</td>
+                                                    <td style="text-align:left; font-weight:700;">PRD-0001 - product 1</td>
+                                                    <td>10 Bags</td>
+                                                    <td>250 Kg</td>
+                                                    <td>Rs 240.00</td>
+                                                    <td style="font-weight:700;">Rs 60,000.00</td>
+                                                </tr>
+                                                <tr style="text-align:center;">
+                                                    <td>3</td>
+                                                    <td style="text-align:left; font-weight:700;">PRD-0001 - product 1</td>
+                                                    <td>40 Bags</td>
+                                                    <td>1,000 Kg</td>
+                                                    <td>Rs 240.00</td>
+                                                    <td style="font-weight:700;">Rs 240,000.00</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        
+                                        <div class="invoice-footer-grid">
+                                            <div class="invoice-totals" style="text-align:left;">
+                                                <div style="font-weight:700;">E & O.E</div>
+                                                <div style="font-weight:700;">THANK YOU FOR YOUR BUSINESS</div>
+                                                <div style="margin-top:10px; font-size:0.65rem; color:#555;">AMOUNT IN WORDS:</div>
+                                                <div style="font-weight:700;">SIX LAKH RUPEES ONLY</div>
+                                            </div>
+                                            <div class="invoice-totals">
+                                                <div><span>Gross Amount:</span> <span>Rs 600,000.00</span></div>
+                                                <div><span>Discount:</span> <span>Rs 0.00</span></div>
+                                                <div class="net"><span>NET INVOICE AMOUNT:</span> <span>Rs 600,000.00</span></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div style="display:flex; justify-content:space-between; margin-top:40px; font-size:0.75rem; text-align:center;">
+                                            <div style="border-top:1px solid #000; width:30%; padding-top:5px;">Prepared By: <strong>Accounts Operator</strong></div>
+                                            <div style="border-top:1px solid #000; width:30%; padding-top:5px;">Checked & Approved By</div>
+                                            <div style="border-top:1px solid #000; width:30%; padding-top:5px;">Customer Signature & Stamp</div>
+                                        </div>
+                                        
+                                        <div style="display:flex; justify-content:space-between; margin-top:20px; font-size:0.65rem; color:#888;">
+                                            <div>Invoice #: INV-11697</div>
+                                            <div>Generated by SystemsTen Plastic Granules ERP | Support: +92 328 2790838</div>
+                                            <div>Page 1 of 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cashier & Vouchers Tab -->
+                            <div class="erp-tab-content" id="tab-cashier-vouchers">
+                                <div class="erp-page-title">
+                                    💸 CASHIER & VOUCHERS (RECEIPTS / PAYMENTS)
+                                </div>
+                                <div class="erp-form-grid">
+                                    <div class="erp-form-group">
+                                        <label>Date</label>
+                                        <input type="date" class="erp-input" value="2026-09-04">
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Voucher Type</label>
+                                        <select class="erp-input"><option>Cash Receipt</option><option>Cash Payment</option></select>
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Account Head</label>
+                                        <select class="erp-input"><option>Select Account</option></select>
+                                    </div>
+                                    <div class="erp-form-group">
+                                        <label>Amount (Rs)</label>
+                                        <input type="number" class="erp-input" value="0.00">
+                                    </div>
+                                    <div class="erp-form-group" style="grid-column: span 2;">
+                                        <label>Narration / Details</label>
+                                        <input type="text" class="erp-input" placeholder="Enter transaction details...">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Party Ledger (Print Preview) -->
+                            <div class="erp-tab-content" id="tab-party-ledger">
+                                <div class="erp-print-modal">
+                                    <div class="erp-print-header">
+                                        <div class="erp-print-title">📄 Formal Account Statement Preview (CUSTOMER 1)</div>
+                                        <div>
+                                            <button class="erp-btn erp-btn-primary" style="background:#059669; border-color:#059669;">⎙ Print A4 Statement</button>
+                                            <button class="erp-btn">✕ Close</button>
+                                        </div>
+                                    </div>
+                                    <div class="erp-a4-page">
+                                        <div class="ledger-header">
+                                            <div style="font-weight:900; font-size:1.1rem; letter-spacing:1px;">SYSTEMSTEN PLASTIC GRANULES ERP</div>
+                                            <div style="font-weight:700; font-size:0.9rem; margin:5px 0;">Customer Account Statement</div>
+                                            <div style="font-size:0.75rem; color:#555;">(From Date: 2026-08-04 To: 2026-09-03, Account: 10701 - CUSTOMER 1, Currency: PKR / Rupees)</div>
+                                        </div>
+                                        
+                                        <div class="ledger-meta">
+                                            <div>Date: <strong>04 Sept 2026</strong></div>
+                                            <div>Time: <strong>01:16 AM</strong></div>
+                                        </div>
+                                        
+                                        <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:5px;">
+                                            <div style="font-weight:700; font-size:0.9rem;">10701 - CUSTOMER 1 <span style="font-weight:normal; font-size:0.7rem; color:#666;">(08 Debtors)</span></div>
+                                            <div style="font-size:0.75rem;">Opening Balance: <strong>Rs 0.00 Dr</strong></div>
+                                        </div>
+                                        
+                                        <table class="ledger-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>DATE</th>
+                                                    <th>TRANS TYPE</th>
+                                                    <th>DOC NO</th>
+                                                    <th>NARRATION / PARTICULARS</th>
+                                                    <th style="text-align:right;">DUAL-UOM (QTY/WT)</th>
+                                                    <th style="text-align:right;">DEBIT (DR)</th>
+                                                    <th style="text-align:right;">CREDIT (CR)</th>
+                                                    <th style="text-align:right;">CLOSING BALANCE</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr style="font-style:italic;">
+                                                    <td>2026-08-04</td>
+                                                    <td>OPENING</td>
+                                                    <td>-</td>
+                                                    <td>Brought Forward Opening Balance</td>
+                                                    <td style="text-align:right;">-</td>
+                                                    <td style="text-align:right;">-</td>
+                                                    <td style="text-align:right;">-</td>
+                                                    <td style="text-align:right; font-weight:700;">0.00 Dr</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2026-09-03</td>
+                                                    <td>Sale</td>
+                                                    <td style="font-weight:700;">11697</td>
+                                                    <td>Sale Inv #11697 - 50 Bags product 1, 10 Bags product 1, 40 Bags product 1</td>
+                                                    <td style="text-align:right; color:#666;">100 Bags / 2500 Kg</td>
+                                                    <td style="text-align:right; font-weight:700;">600,000.00</td>
+                                                    <td style="text-align:right;">-</td>
+                                                    <td style="text-align:right; font-weight:700;">600,000.00 Dr</td>
+                                                </tr>
+                                                <tr class="bold-row">
+                                                    <td colspan="5" style="text-align:right; padding-top:15px;">TOTAL FOR CUSTOMER 1:</td>
+                                                    <td style="text-align:right; padding-top:15px;">Rs 600,000.00</td>
+                                                    <td style="text-align:right; padding-top:15px;">Rs 0.00</td>
+                                                    <td style="text-align:right; padding-top:15px;">Rs 600,000.00 Dr</td>
+                                                </tr>
+                                                <tr class="bold-row" style="background:#e9ecef; font-size:0.75rem;">
+                                                    <td colspan="5" style="text-align:right; padding-top:15px;">GRAND TOTAL CLOSING BALANCE:</td>
+                                                    <td style="text-align:right; padding-top:15px;">Rs 600,000.00</td>
+                                                    <td style="text-align:right; padding-top:15px;">Rs 0.00</td>
+                                                    <td style="text-align:right; padding-top:15px;">Rs 600,000.00 Dr</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        
+                                        <div style="display:flex; justify-content:space-between; margin-top:40px; font-size:0.65rem; color:#888;">
+                                            <div>SHerp - Ver. 2.0 | Printed: 04 Sept 2026 01:16 AM | User: Administrator</div>
+                                            <div>Generated by SystemsTen Plastic Granules ERP</div>
+                                            <div>Page 1 / 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Credit / Debit Notes Tab -->
+                            <div class="erp-tab-content" id="tab-credit-notes">
+                                <div class="erp-page-title">
+                                    📝 CREDIT / DEBIT NOTES (SALES & PURCHASE RETURNS)
+                                </div>
+                                <table class="erp-table">
+                                    <thead>
+                                        <tr><th>Date</th><th>Type</th><th>Account</th><th>Amount</th><th>Status</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td colspan="5" class="erp-empty-state">No return notes generated</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Trial Balance Tab -->
+                            <div class="erp-tab-content" id="tab-trial-balance">
+                                <div class="erp-page-title">
+                                    ⚖️ F7 TRIAL BALANCE STATEMENT (4 HEADS)
+                                </div>
+                                <div style="display:flex; justify-content:flex-end; border-bottom:1px solid #dee2e6; padding-bottom:10px; margin-bottom:15px;">
+                                    <input type="text" class="erp-input" placeholder="Search code, head title..." style="width:250px;">
+                                </div>
+                                <table class="erp-table">
+                                    <thead>
+                                        <tr><th>Code</th><th>Account Head Title</th><th>Level</th><th style="color:#065f46;">Debit (Dr)</th><th style="color:#dc2626;">Credit (Cr)</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>30001</td><td style="font-weight:700;">CAPITAL ACCOUNT</td><td>01 Capital</td><td style="color:#065f46;">-</td><td style="color:#dc2626;">-</td></tr>
+                                        <tr><td>80001</td><td style="font-weight:700;">GENERAL EXPENSES</td><td>03 Expenses</td><td style="color:#065f46;">-</td><td style="color:#dc2626;">-</td></tr>
+                                        <tr><td>90000</td><td style="font-weight:700;">CASH IN HAND</td><td>10 Banks</td><td style="color:#065f46;">-</td><td style="color:#dc2626;">-</td></tr>
+                                        <tr><td>90001</td><td style="font-weight:700;">MAIN BANK ACCOUNT</td><td>10 Banks</td><td style="color:#065f46;">-</td><td style="color:#dc2626;">-</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Stock Balance Tab -->
+                            <div class="erp-tab-content" id="tab-stock-balance">
+                                <div class="erp-page-title">
+                                    📦 F9 LIVE STOCK BALANCE REPORT
+                                </div>
+                                <table class="erp-table">
+                                    <thead>
+                                        <tr><th>System ID</th><th>Product Name</th><th>Total In</th><th>Total Out</th><th>Current Stock</th><th>Valuation</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td colspan="6" class="erp-empty-state">No stock activity recorded</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- AR/AP Aging Tab -->
+                            <div class="erp-tab-content" id="tab-arap-aging">
+                                <div class="erp-page-title">
+                                    ⏳ F10 ACCOUNTS RECEIVABLE (AR) 4-BUCKET OVERDUE AGING ANALYSIS
+                                </div>
+                                <div style="display:flex; justify-content:flex-end; border-bottom:1px solid #dee2e6; padding-bottom:10px; margin-bottom:15px;">
+                                    <input type="text" class="erp-input" placeholder="Search customer name..." style="width:250px;">
+                                </div>
+                                <table class="erp-table">
+                                    <thead>
+                                        <tr><th>Code</th><th>Customer Name</th><th style="color:#059669;">0-30 Days</th><th style="color:#d97706;">31-60 Days</th><th style="color:#dc2626;">61-90 Days</th><th style="color:#991b1b;">90+ Days Overdue</th><th>Total Balance</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td colspan="7" class="erp-empty-state">No customer aging records match your search query.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Drive Backup Tab -->
+                            <div class="erp-tab-content" id="tab-drive-backup">
+                                <div class="erp-page-title">
+                                    💾 F12 DATABASE BACKUP, EXPORT & DISASTER RECOVERY SUITE
+                                </div>
+                                <p style="font-size:0.8rem; color:#666; margin-bottom:20px;">Full multi-format export (Excel, Compressed ZIP, CSV, JSON) and Non-Destructive MongoDB Atlas Cloud Sync.</p>
+                                
+                                <div class="erp-card-grid">
+                                    <div class="erp-card">
+                                        <h4>☁️ MongoDB Atlas Central Cloud Sync (Non-Destructive)</h4>
+                                        <p>Pull live data from Central MongoDB Atlas or safely append/merge local offline transactions.</p>
+                                        <div style="display:flex; gap:10px;">
+                                            <button class="erp-btn erp-btn-primary" style="flex:1; font-size:0.75rem;">Pull from MongoDB</button>
+                                            <button class="erp-btn erp-btn-primary" style="flex:1; font-size:0.75rem; background:#8b5cf6; border-color:#8b5cf6;">Append to MongoDB</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="erp-card">
+                                        <h4>📄 Complete JSON Database Snapshot</h4>
+                                        <p>Complete non-volatile database snapshot containing Accounts, Products, Sales, Purchases, Ledgers, and Audit Trails in standard JSON format.</p>
+                                        <button class="erp-btn erp-btn-primary" style="font-size:0.75rem; align-self:flex-start;">Export JSON Backup</button>
+                                    </div>
+                                    
+                                    <div class="erp-card">
+                                        <h4>📊 Master Multi-Sheet Excel (.xlsx)</h4>
+                                        <p>Complete accounting workbook with structured tabs: Sales Register, Purchase Register, Stock Valuation, General Ledger, and Chart of Accounts.</p>
+                                        <button class="erp-btn erp-btn-primary" style="font-size:0.75rem; background:#059669; border-color:#059669; align-self:flex-start;">Download Excel Workbook</button>
+                                    </div>
+                                    
+                                    <div class="erp-card">
+                                        <h4>🗜️ Compressed All-in-One ZIP Archive</h4>
+                                        <p>Bundles all CSV reports and the full JSON database dump into a single portable zip archive.</p>
+                                        <button class="erp-btn erp-btn-primary" style="font-size:0.75rem; background:#d97706; border-color:#d97706; align-self:flex-start;">Download ZIP Bundle</button>
+                                    </div>
+                                </div>
+                                
+                                <div style="margin-top:20px;">
+                                    <h4 style="font-size:0.8rem; text-transform:uppercase; margin-bottom:10px;">INDIVIDUAL TABLE CSV EXPORTS</h4>
+                                    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                                        <button class="erp-btn" style="color:#1a73e8; border-color:#a4c2f4;">📄 Sales.csv</button>
+                                        <button class="erp-btn" style="color:#d97706; border-color:#fcd34d;">📄 Purchases.csv</button>
+                                        <button class="erp-btn" style="color:#059669; border-color:#6ee7b7;">📄 Stock.csv</button>
+                                        <button class="erp-btn" style="color:#059669; border-color:#6ee7b7;">📄 Ledgers.csv</button>
+                                        <button class="erp-btn" style="color:#8b5cf6; border-color:#c4b5fd;">📄 Accounts.csv</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -212,18 +595,18 @@
                         <!-- Sidebar Navigation -->
                         <div class="erp-sidebar">
                             <div class="erp-sidebar-title">QUICK FUNCTION (F)</div>
-                            <button class="erp-nav-btn" data-target="tab-placeholder">Chart of Accou... <span>F1</span></button>
-                            <button class="erp-nav-btn" data-target="tab-placeholder">Purchase Inward <span>F2</span></button>
-                            <button class="erp-nav-btn" data-target="tab-placeholder">Sales Invoicing <span>F3</span></button>
-                            <button class="erp-nav-btn" data-target="tab-placeholder">Cashier & Vouc... <span>F4</span></button>
-                            <button class="erp-nav-btn" data-target="tab-placeholder">Credit / Debit... <span>F6</span></button>
+                            <button class="erp-nav-btn" data-target="tab-chart-accounts">Chart of Accou... <span>F1</span></button>
+                            <button class="erp-nav-btn" data-target="tab-purchase-inward">Purchase Inward <span>F2</span></button>
+                            <button class="erp-nav-btn" data-target="tab-sales-invoicing">Sales Invoicing <span>F3</span></button>
+                            <button class="erp-nav-btn" data-target="tab-cashier-vouchers">Cashier & Vouc... <span>F4</span></button>
+                            <button class="erp-nav-btn" data-target="tab-party-ledger">Party Ledger <span>F5</span></button>
+                            <button class="erp-nav-btn" data-target="tab-credit-notes">Credit / Debit... <span>F6</span></button>
+                            <button class="erp-nav-btn" data-target="tab-trial-balance">Trial Balance <span>F7</span></button>
                             <button class="erp-nav-btn active" data-target="tab-items-stock">Items & Stock <span>F8</span></button>
-                            <button class="erp-nav-btn" data-target="tab-placeholder">Party Ledger <span>F5</span></button>
-                            <button class="erp-nav-btn" data-target="tab-placeholder">Trial Balance <span>F7</span></button>
-                            <button class="erp-nav-btn" data-target="tab-placeholder">Stock Balance <span>F9</span></button>
-                            <button class="erp-nav-btn" data-target="tab-placeholder">AR/AP Aging <span>F10</span></button>
+                            <button class="erp-nav-btn" data-target="tab-stock-balance">Stock Balance <span>F9</span></button>
+                            <button class="erp-nav-btn" data-target="tab-arap-aging">AR/AP Aging <span>F10</span></button>
                             <button class="erp-nav-btn" data-target="tab-audit-log">Audit Log <span>F11</span></button>
-                            <button class="erp-nav-btn" data-target="tab-placeholder">Drive Backup <span>F12</span></button>
+                            <button class="erp-nav-btn" data-target="tab-drive-backup">Drive Backup <span>F12</span></button>
                         </div>
                     </div>
                 </div>
