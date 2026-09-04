@@ -34,8 +34,11 @@
             <a href="index.html#team">Team</a>
             <a href="index.html#contact">Contact</a>
         </nav>
-        <div class="header__right">
+        <div class="header__right" style="display:flex; align-items:center; gap:0.75rem;">
             <div class="header__status"><span class="header__status-dot"></span><span>Software Live</span></div>
+            <a href="https://demo-plastic-granule-website.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="padding: 0.35rem 0.85rem; font-size: 0.7rem; display: inline-flex; align-items: center; gap: 6px; box-shadow: 2px 2px 0px var(--ink); text-decoration: none;">
+                <span>Live Demo</span> <span style="font-size: 0.9em;">↗</span>
+            </a>
         </div>
         <button class="header__burger" id="headerBurger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
@@ -62,19 +65,69 @@
         <span class="tag" style="font-size: 0.75rem; padding: 0.45em 0.9em; font-weight: 700; background: #fee2e2; border-color: #dc2626; color: #b91c1c;">🛡️ FORENSIC TRASH VAULT</span>
         <span class="tag" style="font-size: 0.75rem; padding: 0.45em 0.9em; font-weight: 700; background: #f3e8ff; border-color: #9333ea; color: #7e22ce;">🔒 ROLE-BASED ACCESS &amp; BLOCKAGE</span>
     </div>
+
+    <!-- Hero Call-To-Action Actions -->
+    <div class="hero__actions reveal" style="display: flex; gap: 1rem; justify-content: center; align-items: center; margin-top: 2rem; flex-wrap: wrap;">
+        <a href="https://demo-plastic-granule-website.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; padding: 0.85rem 2rem; text-decoration: none;">
+            <span class="live-pulse-dot"></span>
+            <span>Launch Live Production Demo</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+        <a href="#showcase" class="btn btn--ghost" style="font-size: 0.82rem; padding: 0.85rem 1.6rem; text-decoration: none;">Interactive Simulator ↓</a>
+        <a href="#demo" class="btn btn--ghost" style="font-size: 0.82rem; padding: 0.85rem 1.6rem; text-decoration: none;">Request Custom Instance</a>
+    </div>
 </section>
 
 <!-- ====== INTERACTIVE MOCKUP SECTION ====== -->
 <section class="section section--surface" id="showcase">
+    <div class="container" style="max-width: 1400px; margin-bottom: 2rem;">
+        <div class="section__header reveal" style="margin-bottom: 2rem;">
+            <div class="section__eyebrow">// Live Cloud Deployment &amp; Interactive Simulator</div>
+            <h2 class="section__title">Plastic Granules<br>Live Demo Instance</h2>
+            <p style="margin-top: 1rem; opacity: 0.75; font-size: var(--fs-data); max-width: 760px; line-height: 1.8;">
+                Experience the live cloud accounting system in production. Launch our hosted instance on Render to test dual-unit sales, master registers, and live financial reporting in real-time.
+            </p>
+        </div>
+
+        <!-- Live Demo Showcase Banner -->
+        <div class="live-demo-banner reveal">
+            <div class="live-demo-banner__left">
+                <div class="live-demo-banner__status">
+                    <span class="live-pulse-dot"></span>
+                    <span>Live Production Instance Online</span>
+                </div>
+                <h3 class="live-demo-banner__title">SystemsTen — Plastic Granules Accounting &amp; ERP</h3>
+                <p class="live-demo-banner__desc">
+                    Direct web URL: <code>demo-plastic-granule-website.onrender.com</code> • Dual-Unit Math (Bags &amp; Net Kg) • Live Master Registers • Counter POS
+                </p>
+            </div>
+            <a href="https://demo-plastic-granule-website.onrender.com/" target="_blank" rel="noopener noreferrer" class="live-demo-banner__btn">
+                <span>Open Live Demo</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+        </div>
+    </div>
+
     <div class="mockup-container reveal" id="mockupContainer">
         <div class="mockup-window" id="mockupWindow">
             <div class="mockup-header">
-                <div class="mockup-dots">
-                    <span class="mockup-dot red"></span>
-                    <span class="mockup-dot yellow"></span>
-                    <span class="mockup-dot green"></span>
+                <div class="mockup-header-left">
+                    <div class="mockup-dots">
+                        <span class="mockup-dot red"></span>
+                        <span class="mockup-dot yellow"></span>
+                        <span class="mockup-dot green"></span>
+                    </div>
+                    <div class="mockup-title">SystemsTen - Plastic Granules ERP</div>
                 </div>
-                <div class="mockup-title">SystemsTen - Plastic Granules ERP</div>
+                <a href="https://demo-plastic-granule-website.onrender.com/" target="_blank" rel="noopener noreferrer" class="mockup-url-bar" title="Click to open live production instance in new tab">
+                    <span class="mockup-lock">🔒</span>
+                    <span class="mockup-domain">https://demo-plastic-granule-website.onrender.com/</span>
+                    <span class="mockup-arrow">↗</span>
+                </a>
+                <a href="https://demo-plastic-granule-website.onrender.com/" target="_blank" rel="noopener noreferrer" class="mockup-launch-btn">
+                    <span>Open Live App</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
             </div>
             <div class="mockup-body" style="padding:0; background:transparent;">
                 <div class="erp-app">
@@ -85,6 +138,7 @@
                         </div>
                         <div class="erp-header-actions">
                             <span class="erp-badge success">Connected</span>
+                            <a href="https://demo-plastic-granule-website.onrender.com/" target="_blank" rel="noopener noreferrer" class="erp-badge" style="background:#c6ff00; color:#000; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:4px; padding: 2px 8px; border: 1px solid #000;" title="Launch live deployed web app">🚀 Live App ↗</a>
                             <span class="erp-badge" style="border:none; background:transparent;">🌙 Dark Mode</span>
                             <span class="erp-badge">CASH IN HAND: <span style="color:#10b981;">Rs 0.00</span></span>
                             <span class="erp-badge">MAIN BANK ACCO... <span style="color:#1a73e8;">Rs 0.00</span></span>
@@ -1509,7 +1563,7 @@
                 <p style="font-size: 0.85rem; opacity: 0.75; line-height: 1.7; margin-bottom: 1.2rem;">Deploy as a lightweight Windows 10/11 desktop executable (.exe) for till counters or access securely via central web portal.</p>
                 <div style="display: flex; flex-wrap: wrap; gap: 6px;">
                     <span class="tag tag--filled" style="font-size: 0.65rem;">Windows .exe</span>
-                    <span class="tag tag--safety" style="font-size: 0.65rem;">Secure Web</span>
+                    <a href="https://demo-plastic-granule-website.onrender.com/" target="_blank" rel="noopener noreferrer" class="tag tag--safety" style="font-size: 0.65rem; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">🚀 Live on Render ↗</a>
                 </div>
             </div>
         </div>
@@ -1526,7 +1580,24 @@
                 <p style="margin-top: 1.5rem; opacity: 0.7; font-size: var(--fs-data); line-height: 1.8;">
                     Let us know what kind of plastic enterprise you operate (Dana compounding, recycling, raw material trading, film extrusion, injection moulding). We will configure an interactive demo instance tailored to your bag/kg workflow.
                 </p>
-                <div style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
+
+                <!-- Instant Live Sandbox Card -->
+                <div style="margin-top: 1.75rem; padding: 1.25rem; background: var(--base); border: 2px solid var(--ink); box-shadow: 4px 4px 0px var(--ink);">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.5rem;">
+                        <span class="live-pulse-dot"></span>
+                        <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">Instant Access Available</span>
+                    </div>
+                    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem;">Prefer to test immediately?</div>
+                    <p style="font-size: 0.82rem; opacity: 0.75; line-height: 1.6; margin-bottom: 1rem;">
+                        You don't need to wait for a custom demo. Experience our live production deployment hosted on Render with pre-loaded polymer inventory and dual-unit sales.
+                    </p>
+                    <a href="https://demo-plastic-granule-website.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; padding: 0.6rem 1.2rem; text-decoration: none;">
+                        <span>Launch Live Sandbox</span>
+                        <span style="font-size: 1.1em;">↗</span>
+                    </a>
+                </div>
+
+                <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem;">
                     <div>
                         <span style="color: var(--safety); font-weight: bold; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.1em; display: block; margin-bottom: 0.25rem;">Email Inquiry:</span>
                         <a href="mailto:infosystemsten@gmail.com" style="font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; font-weight: 500; text-decoration: underline;">infosystemsten@gmail.com</a>
